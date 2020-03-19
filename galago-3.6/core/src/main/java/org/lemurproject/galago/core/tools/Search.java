@@ -53,7 +53,6 @@ public class Search {
   }
 
   public static class SearchResult {
-
     public String queryAsString;
     public Node query;
     public Node transformedQuery;
@@ -65,7 +64,6 @@ public class Search {
   }
 
   public static class SearchResultItem {
-
     public int rank;
     public String identifier;
     public String displayTitle;

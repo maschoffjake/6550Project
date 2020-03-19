@@ -195,13 +195,14 @@ public class SearchWebHandler implements WebHandler {
     writer.append("</div>");
 
     for (SearchResultItem item : result.items) {
+      System.out.println(item.document.toString());
       writer.append("<div id=\"result\">\n");
       writer.append(String.format("<a href=\"document?identifier=%s\">%s</a><br/>"
-              // + "<div id=\"summary\">%s</div>\n"
+              + "<div id=\"summary\">%s</div>\n"
               + "<div id=\"meta\">%s - %s - %.2f</div>\n",
               item.identifier,
               item.displayTitle,
-              // item.summary,
+              item.summary,
               scrub(item.identifier),
               scrub(item.url),
               item.score));
