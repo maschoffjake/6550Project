@@ -22,11 +22,11 @@ T23 : 'type' ;
 T24 : '{' ;
 T25 : '}' ;
 
-// $ANTLR src "/Users/jakemaschoff/Desktop/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g" 72
+// $ANTLR src "/Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g" 72
 ID  :   ('a'..'z'|'A'..'Z'|'_'|'0'..'9')+ ;
-// $ANTLR src "/Users/jakemaschoff/Desktop/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g" 73
+// $ANTLR src "/Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g" 73
 NEWLINE:'\r'? '\n' {skip();} ;
-// $ANTLR src "/Users/jakemaschoff/Desktop/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g" 74
+// $ANTLR src "/Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g" 74
 WS  :   (' '|'\t')+ {skip();} ;
-// $ANTLR src "/Users/jakemaschoff/Desktop/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g" 75
+// $ANTLR src "/Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g" 75
 COMMENT : '/' '/' (~('\n'|'\r'))* {skip();} ;
