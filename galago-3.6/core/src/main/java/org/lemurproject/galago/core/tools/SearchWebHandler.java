@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -43,9 +44,25 @@ import java.util.Map.Entry;
 public class SearchWebHandler implements WebHandler {
 
   protected Search search;
+  protected FileWriter logWriter;
 
   public SearchWebHandler(Search search) {
     this.search = search;
+
+    try {
+      LocalDateTime ldt = LocalDateTime.now();
+
+      // Create log document for recording documents visited, queries searched, and times that they were done
+      File documentFile = new File("log-" + ldt.toString() + ".txt");
+      this.logWriter = new FileWriter(documentFile);
+
+      // Give a starting time, to when the server started
+      this.logWriter.write(LocalDateTime.now().toString() + ":start");
+    } catch (IOException e) {
+      System.out.println("ERROR unable to create logs! Exiting");
+      System.exit(-1);;
+    }
+
   }
 
   public String getEscapedString(String text) {
@@ -72,6 +89,9 @@ public class SearchWebHandler implements WebHandler {
     response.setContentType("text/html; charset=UTF-8");
 
     PrintWriter writer = response.getWriter();
+
+    // Log this data
+    this.logWriter.write(LocalDateTime.now().toString() + ":doc:" + document.name);
     
     writer.write(document.name);
     writer.write("<p>");
@@ -152,6 +172,9 @@ public class SearchWebHandler implements WebHandler {
     response.setContentType("text/html");
     String displayQuery = scrub(request.getParameter("q"));
     String encodedQuery = URLEncoder.encode(request.getParameter("q"), "UTF-8");
+
+    // Log this info this time stamp
+    this.logWriter.write(LocalDateTime.now().toString() + ":query:" + displayQuery);
 
     PrintWriter writer = response.getWriter();
     writer.append("<html>\n");
