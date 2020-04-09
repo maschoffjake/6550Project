@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.Map.Entry;
@@ -60,6 +62,7 @@ public class SearchWebHandler implements WebHandler {
       // Give a starting time, to when the server started
       this.log.write(LocalDateTime.now().toString() + ":start\n");
       this.log.flush();
+
     } catch (IOException e) {
       System.out.println("ERROR unable to create logs! Exiting");
       System.exit(-1);;
@@ -93,7 +96,9 @@ public class SearchWebHandler implements WebHandler {
     PrintWriter writer = response.getWriter();
 
     // Log this data
-    this.log.write(LocalDateTime.now().toString() + ":doc:" + document.name + "\n");
+    String filenameWithExtension = Paths.get(document.name).getFileName().toString();
+    String filename = filenameWithExtension.substring(0, filenameWithExtension.lastIndexOf('.'));
+    this.log.write(LocalDateTime.now().toString() + ":doc:" + filename + "\n");
     this.log.flush();
     
     writer.write(document.name);
