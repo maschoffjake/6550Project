@@ -44,7 +44,7 @@ import java.util.Map.Entry;
 public class SearchWebHandler implements WebHandler {
 
   protected Search search;
-  protected FileWriter logWriter;
+  protected BufferedWriter log;
 
   public SearchWebHandler(Search search) {
     this.search = search;
@@ -54,10 +54,12 @@ public class SearchWebHandler implements WebHandler {
 
       // Create log document for recording documents visited, queries searched, and times that they were done
       File documentFile = new File("log-" + ldt.toString() + ".txt");
-      this.logWriter = new FileWriter(documentFile);
+      FileWriter logWriter = new FileWriter(documentFile);
+      this.log = new BufferedWriter(logWriter);
 
       // Give a starting time, to when the server started
-      this.logWriter.write(LocalDateTime.now().toString() + ":start");
+      this.log.write(LocalDateTime.now().toString() + ":start");
+      this.log.flush();
     } catch (IOException e) {
       System.out.println("ERROR unable to create logs! Exiting");
       System.exit(-1);;
@@ -91,7 +93,8 @@ public class SearchWebHandler implements WebHandler {
     PrintWriter writer = response.getWriter();
 
     // Log this data
-    this.logWriter.write(LocalDateTime.now().toString() + ":doc:" + document.name);
+    this.log.write(LocalDateTime.now().toString() + ":doc:" + document.name);
+    this.log.flush();
     
     writer.write(document.name);
     writer.write("<p>");
@@ -174,7 +177,8 @@ public class SearchWebHandler implements WebHandler {
     String encodedQuery = URLEncoder.encode(request.getParameter("q"), "UTF-8");
 
     // Log this info this time stamp
-    this.logWriter.write(LocalDateTime.now().toString() + ":query:" + displayQuery);
+    this.log.write(LocalDateTime.now().toString() + ":query:" + displayQuery);
+    this.log.flush();
 
     PrintWriter writer = response.getWriter();
     writer.append("<html>\n");
