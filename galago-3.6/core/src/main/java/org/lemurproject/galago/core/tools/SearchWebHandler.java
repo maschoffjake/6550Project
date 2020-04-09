@@ -58,7 +58,7 @@ public class SearchWebHandler implements WebHandler {
       this.log = new BufferedWriter(logWriter);
 
       // Give a starting time, to when the server started
-      this.log.write(LocalDateTime.now().toString() + ":start");
+      this.log.write(LocalDateTime.now().toString() + ":start\n");
       this.log.flush();
     } catch (IOException e) {
       System.out.println("ERROR unable to create logs! Exiting");
@@ -93,7 +93,7 @@ public class SearchWebHandler implements WebHandler {
     PrintWriter writer = response.getWriter();
 
     // Log this data
-    this.log.write(LocalDateTime.now().toString() + ":doc:" + document.name);
+    this.log.write(LocalDateTime.now().toString() + ":doc:" + document.name + "\n");
     this.log.flush();
     
     writer.write(document.name);
@@ -177,7 +177,7 @@ public class SearchWebHandler implements WebHandler {
     String encodedQuery = URLEncoder.encode(request.getParameter("q"), "UTF-8");
 
     // Log this info this time stamp
-    this.log.write(LocalDateTime.now().toString() + ":query:" + displayQuery);
+    this.log.write(LocalDateTime.now().toString() + ":query:" + displayQuery + "\n");
     this.log.flush();
 
     PrintWriter writer = response.getWriter();
