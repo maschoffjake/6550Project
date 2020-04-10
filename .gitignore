@@ -1,3 +1,25 @@
 wiki-large-index/
 en/
 wiki-large.tar.gz
+
+# dependencies
+ir_tester_frontend/node_modules
+ir_tester_frontend/.pnp
+ir_tester_frontend/.pnp.js
+
+# testing
+ir_tester_frontend/coverage
+
+# production
+ir_tester_frontend/build
+
+# misc
+ir_tester_frontend/.DS_Store
+ir_tester_frontend/.env.local
+ir_tester_frontend/.env.development.local
+ir_tester_frontend/.env.test.local
+ir_tester_frontend/.env.production.local
+
+ir_tester_frontend/npm-debug.log*
+ir_tester_frontend/yarn-debug.log*
+ir_tester_frontend/yarn-error.log*
