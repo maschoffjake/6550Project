@@ -1,0 +1,26 @@
+.projectTitle {
+    text-align: center;
+}
+
+.authors {
+    font-size: medium;
+    text-align: center;
+}
+
+h2.info {
+    font-size: medium;
+    margin-top:40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.buttonRow {
+    margin-top:20px;
+    display: table;
+    width: 100%;
+    table-layout: fixed;    /* For cells of equal size */
+}
+div.buttonRow span {
+    display: table-cell;
+    text-align: center;
+}
