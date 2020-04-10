@@ -1,7 +1,34 @@
+# BACKEND
+# index info
 wiki-large-index/
 en/
 wiki-large.tar.gz
 
+# backend files not being changed
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/btree/
+galago-3.6/core/src/main/galagotype/
+galago-3.6/core/src/main/java/org/tartarus/
+galago-3.6/core/src/main/resources/
+galago-3.6/core/src/test/
+galago-3.6/core/target/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/corpus/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/eval/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/index/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/links/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/parse/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/repair/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/retrieval/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/tokenize/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/util/
+galago-3.6/core/src/main/java/org/lemurproject/galago/core/window/
+galago-3.6/lib/
+galago-3.6/scripts/
+galago-3.6/src/
+galago-3.6/tupleflow/
+galago-3.6/tupleflow-typebuilder/
+galago-3.6/contrib/
+
+# FRONTEND
 # dependencies
 ir_tester_frontend/node_modules
 ir_tester_frontend/.pnp

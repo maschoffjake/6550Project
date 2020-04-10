@@ -55,7 +55,7 @@ public class SearchWebHandler implements WebHandler {
       LocalDateTime ldt = LocalDateTime.now();
 
       // Create log document for recording documents visited, queries searched, and times that they were done
-      File documentFile = new File("log-" + ldt.toString() + ".txt");
+      File documentFile = new File("logs/log-" + ldt.toString() + ".txt");
       FileWriter logWriter = new FileWriter(documentFile);
       this.log = new BufferedWriter(logWriter);
 

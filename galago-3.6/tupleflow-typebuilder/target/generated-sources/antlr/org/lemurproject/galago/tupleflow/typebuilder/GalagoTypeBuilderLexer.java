@@ -1,4 +1,4 @@
-// $ANTLR 3.0.1 /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g 2020-04-09 11:28:59
+// $ANTLR 3.0.1 /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g 2020-04-09 23:49:49
 
   package org.lemurproject.galago.tupleflow.typebuilder;
 
