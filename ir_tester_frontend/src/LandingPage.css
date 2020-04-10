@@ -14,13 +14,13 @@ h2.info {
     font-weight: bold;
 }
 
-div.buttonRow {
+div.cardDeck {
     margin-top:20px;
     display: table;
     width: 100%;
     table-layout: fixed;    /* For cells of equal size */
 }
-div.buttonRow span {
+div.cardDeck span {
     display: table-cell;
     text-align: center;
 }

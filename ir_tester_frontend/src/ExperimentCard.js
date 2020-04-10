@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 
 function ExperimentCard(props) {
     return (
-    <span>
+    <span className="px-2">
         <Card>
           <Card.Header as="h5">{props.experimentName}</Card.Header>
             <Card.Body>
