@@ -1,28 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './LandingPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import ExperimentCard from './ExperimentCard'
 
-function App() {
-  return (
-    <header className="App-header">
-      <Jumbotron fluid>
-          <h1 className="projectTitle">Rating of Search Engine Properties</h1>
-          <h2 className="authors">Jake Maschoff, Melvin Bosnjak, Bond Denhalter</h2>
-          <h2 className="info">Click any of the experiment buttons to begin an experiment!</h2>
-          
-          {/* Button row */}
-          <div className="cardDeck">
-            <ExperimentCard experimentName="Experiment 1" description={getExperiment1Description()} />
-            <ExperimentCard experimentName="Experiment 2" description={getExperiment2Description()} />
-            <ExperimentCard experimentName="Experiment 3" description={getExperiment3Description()} />
-            <ExperimentCard experimentName="Experiment 4" description={getExperiment4Description()} />
-          </div>
-
-      </Jumbotron>
-    </header>
-  );
+class LandingPage extends Component {
+  render() {
+    return (
+      <header className="App-header">
+        <Jumbotron fluid>
+            <h1 className="projectTitle">Rating of Search Engine Properties</h1>
+            <h2 className="authors">Jake Maschoff, Melvin Bosnjak, Bond Denhalter</h2>
+            <h2 className="info">Click any of the experiment buttons to begin an experiment!</h2>
+            
+            {/* Button row */}
+            <div className="cardDeck">
+              <ExperimentCard experimentName="Experiment 1" description={getExperiment1Description()} />
+              <ExperimentCard experimentName="Experiment 2" description={getExperiment2Description()} />
+              <ExperimentCard experimentName="Experiment 3" description={getExperiment3Description()} />
+              <ExperimentCard experimentName="Experiment 4" description={getExperiment4Description()} />
+            </div>
+  
+        </Jumbotron>
+      </header>
+    );
+  }
 }
 
 function getExperiment1Description() {
@@ -44,4 +46,4 @@ function getExperiment4Description() {
   return "Only the document length for the relevant documents are shown."
 }
 
-export default App;
+export default LandingPage;
