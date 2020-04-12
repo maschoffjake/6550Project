@@ -6,6 +6,7 @@ import ExperimentCard from './ExperimentCard'
 
 class LandingPage extends Component {
   render() {
+    console.log(this.props.callback);
     return (
       <header className="App-header">
         <Jumbotron fluid>
@@ -15,10 +16,10 @@ class LandingPage extends Component {
             
             {/* Button row */}
             <div className="cardDeck">
-              <ExperimentCard experimentName="Experiment 1" description={getExperiment1Description()} />
-              <ExperimentCard experimentName="Experiment 2" description={getExperiment2Description()} />
-              <ExperimentCard experimentName="Experiment 3" description={getExperiment3Description()} />
-              <ExperimentCard experimentName="Experiment 4" description={getExperiment4Description()} />
+              <ExperimentCard experimentName={1} callback={this.props.callback} description={getExperiment1Description()} />
+              <ExperimentCard experimentName={2} callback={this.props.callback} description={getExperiment2Description()} />
+              <ExperimentCard experimentName={3} callback={this.props.callback} description={getExperiment3Description()} />
+              <ExperimentCard experimentName={4} callback={this.props.callback} description={getExperiment4Description()} />
             </div>
   
         </Jumbotron>

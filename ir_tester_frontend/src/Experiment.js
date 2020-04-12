@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 
 class Experiment extends Component {
     render() {
+        console.log('Creating experiment');
         return (
             <p>
-                Hi!
+                Hi experiment { this.props.experimentNumber }!
             </p>
         )
     }
