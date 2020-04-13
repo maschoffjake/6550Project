@@ -28,7 +28,6 @@ class Experiment extends Component {
      * Make API call to grab data
      */
     async componentDidMount() {
-        console.log('Making call')
         let query = '';
         switch (this.state.experimentNumber) {
             case "1":
@@ -47,7 +46,6 @@ class Experiment extends Component {
                 console.log('BAD API CALL! Using experiment ' + this.state.experimentNumber + ' which is not a valid experiment.');
                 return;
         }
-        console.log(query);
         const experimentData = await API.get(`/experiment/${this.state.experimentNumber}${query}`);
         this.setState({
             experiments: experimentData.data

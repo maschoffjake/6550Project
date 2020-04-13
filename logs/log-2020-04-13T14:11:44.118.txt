@@ -39,3 +39,6 @@
 2020-04-13T15:11:16.502:experiment1:query:dinosaur
 2020-04-13T15:13:23.869:experiment1:query:dinosaur
 2020-04-13T15:13:28.078:experiment1:query:dinosaur
+2020-04-13T15:15:19.793:experiment1:query:dinosaur
+2020-04-13T15:15:42.421:experiment1:query:dinosaur
+2020-04-13T15:15:59.760:experiment1:query:dinosaur

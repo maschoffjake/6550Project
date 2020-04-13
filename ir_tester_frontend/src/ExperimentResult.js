@@ -3,7 +3,6 @@ import './Experiment.css';
 
 class ExperimentResult extends Component {
     render() {
-        console.log(this.props);
         return (
             <div id="result">
                 <a href={this.props.link} dangerouslySetInnerHTML={{__html:this.props.title}} />
