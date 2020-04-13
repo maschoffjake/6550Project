@@ -8,9 +8,7 @@ class ExperimentResult extends Component {
             <div id="result">
                 {this.props.link}
                 <br />
-                <div id="summary">
-                    {this.props.summary}
-                </div>
+                <div id="summary" dangerouslySetInnerHTML={{__html:this.props.summary}}/>   {/* Need to do this since HTML is returned... */}
                 <div id="meta">
                     {this.props.meta}
                 </div>

@@ -11,6 +11,10 @@ class Experiment extends Component {
             experiments: [],
             experimentNumber: this.props.match.params.experimentID
         }
+        this.experiment1Query = 'dinosaur';
+        this.experiment2Query = 'world+war+2';
+        this.experiment3Query = 'weather';
+        this.experiment4Query = 'police';
     }
     render() {
         return (
@@ -28,16 +32,16 @@ class Experiment extends Component {
         let query = '';
         switch (this.state.experimentNumber) {
             case "1":
-                query += '?q=dinosaur';
+                query += `?q=${this.experiment1Query}`;
                 break;
             case "2":
-                query += '?q=world+war+2';
+                query += `?q=${this.experiment2Query}`;
                 break;
             case "3":
-                query += '?q=weather';
+                query += `?q=${this.experiment3Query}`;
                 break;
             case "4":
-                query += '?q=police';
+                query += `?q=${this.experiment4Query}`;
                 break;
             default:
                 console.log('BAD API CALL! Using experiment ' + this.state.experimentNumber + ' which is not a valid experiment.');

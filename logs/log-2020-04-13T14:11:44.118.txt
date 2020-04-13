@@ -16,3 +16,19 @@
 2020-04-13T14:47:55.554:experiment1:query:dinosaur
 2020-04-13T14:48:45.273:experiment1:query:dinosaur
 2020-04-13T14:49:20.216:experiment2:query:world war 2
+2020-04-13T14:49:47.563:experiment3:query:weather
+2020-04-13T14:50:01.696:experiment3:query:weather
+2020-04-13T14:50:04.155:experiment4:query:police
+2020-04-13T14:59:25.383:experiment4:query:police
+2020-04-13T14:59:55.784:experiment4:query:police
+2020-04-13T15:00:08.319:experiment2:query:world war 2
+2020-04-13T15:00:17.971:experiment1:query:dinosaur
+2020-04-13T15:00:21.673:experiment4:query:police
+2020-04-13T15:01:41.473:experiment2:query:world war 2
+2020-04-13T15:01:55.387:query:hi
+2020-04-13T15:02:19.091:experiment1:query:dinosaur
+2020-04-13T15:04:51.664:experiment1:query:dinosaur
+2020-04-13T15:05:06.780:experiment1:query:dinosaur
+2020-04-13T15:05:18.947:experiment1:query:dinosaur
+2020-04-13T15:05:54.741:experiment1:query:police
+2020-04-13T15:06:00.787:experiment1:query:dinosaur
