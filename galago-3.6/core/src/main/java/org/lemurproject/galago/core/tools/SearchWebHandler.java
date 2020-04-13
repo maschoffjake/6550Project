@@ -471,6 +471,20 @@ public class SearchWebHandler implements WebHandler {
     writer.close();
   }
 
+  /**
+   * Added code used for handling experiments specific to our project
+   * @param request
+   * @param response
+   */
+  public void handleExperiments(HttpServletRequest request, HttpServletResponse response) {
+    // Grab the experiment number
+    String path = request.getPathInfo();
+    String experNum = path.substring(path.length() - 1);  // Last digit of path
+    int experimentNumber = Integer.parseInt(experNum);
+    
+    System.out.println("Serving experiment" + experimentNumber);
+  }
+
   public void handle(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     if (request.getPathInfo().equals("/search")) {
       try {
@@ -479,6 +493,9 @@ public class SearchWebHandler implements WebHandler {
           e.printStackTrace();
         throw new ServletException("Caught exception from handleSearch", e);
       }
+    } 
+    else if (request.getPathInfo().contains("/experiment")) {
+      handleExperiments(request, response);
     } else if (request.getPathInfo().equals("/document")) {
       handleDocument(request, response);
     } else if (request.getPathInfo().equals("/searchxml")) {

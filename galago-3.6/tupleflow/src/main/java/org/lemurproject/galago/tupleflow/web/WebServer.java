@@ -72,11 +72,6 @@ public class WebServer {
   public static WebServer start(Parameters p, WebHandler handler) throws WebServerException {
     int port = (int) p.get("port", 0);
     if (port == 0) {
-      // try {
-      //   port = Utility.getFreePort();
-      // } catch (IOException e) {
-      //   throw new WebServerException(e);
-      // }
       port = 8080;  // Default to 8080, so it is consistent
     }
     return start(port, handler);
