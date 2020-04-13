@@ -93,9 +93,12 @@ public class SearchWebHandler implements WebHandler {
     String identifier = request.getParameter("identifier");
     identifier = URLDecoder.decode(identifier, "UTF-8");
     DocumentComponents p = new DocumentComponents(true, true, false);
+    System.out.println("1");
     Document document = search.getDocument(identifier, p);
     response.setContentType("text/html; charset=UTF-8");
-
+    // Add CORS policy
+    response.addHeader("Access-Control-Allow-Origin", "*");
+    
     PrintWriter writer = response.getWriter();
 
     // Log this data
@@ -103,6 +106,8 @@ public class SearchWebHandler implements WebHandler {
     String filename = filenameWithExtension.substring(0, filenameWithExtension.lastIndexOf('.'));
     this.log.write(LocalDateTime.now().toString() + ":doc:" + filename + "\n");
     this.log.flush();
+
+    System.out.println("2");
     
     writer.write(document.name);
     writer.write("<p>");
@@ -119,6 +124,7 @@ public class SearchWebHandler implements WebHandler {
 
     writer.write("TEXT:");
     writer.write(getEscapedString(document.text));
+    System.out.println("returning:" + document.text);
     writer.close();
   }
 

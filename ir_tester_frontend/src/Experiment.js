@@ -46,7 +46,10 @@ class Experiment extends Component {
                 console.log('BAD API CALL! Using experiment ' + this.state.experimentNumber + ' which is not a valid experiment.');
                 return;
         }
-        const experimentData = await API.get(`/experiment/${this.state.experimentNumber}${query}`);
+        const experimentData = await API.get(`/experiment/${this.state.experimentNumber}${query}`,
+                                                {
+                                                    responseType: 'json'
+                                                });
         this.setState({
             experiments: experimentData.data
         });

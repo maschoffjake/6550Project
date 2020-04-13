@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LandingPage from './LandingPage';
 import Experiment from './Experiment';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Document from './Document';
 
 class Main extends Component {
     render() {
@@ -12,10 +13,10 @@ class Main extends Component {
                         <Experiment />
                     </Route>
                     <Route path="/document">
-                        
+                        <Document />
                     </Route>                    
                     <Route path="/">
-                        <LandingPage exact/>
+                        <LandingPage/>
                     </Route>
                 </Switch>
             </Router>

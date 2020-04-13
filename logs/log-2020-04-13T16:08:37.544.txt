@@ -1,0 +1,10 @@
+2020-04-13T16:08:37.588:start
+2020-04-13T16:11:33.962:doc:List_of_WWE_Hardcore_Champions_3154
+2020-04-13T16:12:10.341:doc:List_of_WWE_Hardcore_Champions_3154
+2020-04-13T16:12:12.123:doc:List_of_WWE_Hardcore_Champions_3154
+2020-04-13T16:13:09.717:doc:List_of_WWE_Hardcore_Champions_3154
+2020-04-13T16:13:40.692:experiment2:query:world war 2
+2020-04-13T16:13:43.675:doc:Lazare_Ponticelli_7a66
+2020-04-13T16:13:45.368:experiment2:query:world war 2
+2020-04-13T16:13:46.247:doc:Our_Worlds_at_War_7584
+2020-04-13T16:13:47.318:experiment2:query:world war 2
