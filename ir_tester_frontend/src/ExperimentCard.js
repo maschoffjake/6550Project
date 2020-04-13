@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './LandingPage.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import {Link} from 'react-router-dom';
 
 class ExperimentCard extends Component {
     render() {
@@ -14,7 +14,7 @@ class ExperimentCard extends Component {
                       <Card.Text>
                         {this.props.description}
                       </Card.Text>
-                          <Button variant="outline-primary" onClick={() => this.props.callback(this.props.experimentName)} >Start Experiment {this.props.experimentName}</Button>{' '}
+                        <Link className="btn btn-primary" to="/experiment" > Experiment </Link>
                     </Card.Body>
                 </Card>
             </span>
@@ -22,4 +22,4 @@ class ExperimentCard extends Component {
     }
 }
 
-export default ExperimentCard
+export default ExperimentCard;

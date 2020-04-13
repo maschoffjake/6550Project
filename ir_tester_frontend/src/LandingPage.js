@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './LandingPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Jumbotron from 'react-bootstrap/Jumbotron'
-import ExperimentCard from './ExperimentCard'
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import ExperimentCard from './ExperimentCard';
+import {withRouter} from 'react-router-dom';
 
 class LandingPage extends Component {
   render() {
-    console.log(this.props.callback);
     return (
       <header className="App-header">
         <Jumbotron fluid>
@@ -47,4 +47,4 @@ function getExperiment4Description() {
   return "Only the document length for the relevant documents are shown."
 }
 
-export default LandingPage;
+export default withRouter(LandingPage);

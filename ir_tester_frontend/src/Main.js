@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import LandingPage from './LandingPage';
 import Experiment from './Experiment';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
 
 class Main extends Component {
     constructor() {
         super()
-
         this.state = {
             showExperiment: false,
             experimentNum: 0
         };
-
         this.changeToExperimentCallback = this.changeToExperiment.bind(this);
     }
 
@@ -35,17 +35,18 @@ class Main extends Component {
     }
 
     render() {
-        // Check to see what to render (either landing page, or expierment that was clicked)
-        if (!this.state.showExperiment) {
-            return (
-                <LandingPage callback={this.changeToExperimentCallback}/>
-            );
-        }
-        else {
-            return (
-                <Experiment experimentNumber={this.state.experimentNum}/>
-            );
-        }
+        return (
+            <Router>
+                <Switch>
+                    <Route path="/experiment" exact>
+                        <Experiment experimentNumber={this.state.experimentNum}/>
+                    </Route>                    
+                    <Route path="/">
+                        <LandingPage callback={this.changeToExperimentCallback}/>
+                    </Route>
+                </Switch>
+            </Router>
+        );
     }
 }
 

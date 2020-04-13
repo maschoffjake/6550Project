@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import {withRouter} from 'react-router-dom';
 
 class Experiment extends Component {
     render() {
-        console.log('Creating experiment');
         return (
             <p>
                 Hi experiment { this.props.experimentNumber }!
@@ -12,4 +11,4 @@ class Experiment extends Component {
     }
 }
 
-  export default Experiment;
+  export default withRouter(Experiment);
