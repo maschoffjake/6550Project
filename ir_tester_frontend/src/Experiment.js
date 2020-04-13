@@ -9,6 +9,20 @@ class Experiment extends Component {
             </p>
         )
     }
+
+    /**
+     * Make API call to grab data
+     */
+    componentDidMount() {
+
+    }
+
+    /**
+     * Used to fetch the experiment results from this 
+     */
+    fetchExperimentResults() {
+        return "";
+    }
 }
 
   export default withRouter(Experiment);
