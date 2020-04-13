@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom';
+import './Experiment.css';
+import API from "./utils/API";
+
 
 class Experiment extends Component {
     render() {
@@ -14,14 +17,8 @@ class Experiment extends Component {
      * Make API call to grab data
      */
     componentDidMount() {
-
-    }
-
-    /**
-     * Used to fetch the experiment results from this 
-     */
-    fetchExperimentResults() {
-        return "";
+        const experimentData = await API.get(`/experiment${this.props.match.params.experimentID}`);
+        console.log(experimentData);
     }
 }
 
