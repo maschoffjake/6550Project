@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 
 class ExperimentCard extends Component {
     render() {
+      const path = `/experiment/${this.props.experimentNum}`;
         return (
             <span className="px-2">
                 <Card>
-                  <Card.Header as="h5">Experiment {this.props.experimentName}</Card.Header>
+                  <Card.Header as="h5">Experiment {this.props.experimentNum}</Card.Header>
                     <Card.Body>
                       <Card.Title>Description</Card.Title>
                       <Card.Text>
                         {this.props.description}
                       </Card.Text>
-                        <Link className="btn btn-primary" to="/experiment" > Experiment </Link>
+                        <Link className="btn btn-primary" to={path} >Start Experiment {this.props.experimentNum}</Link>
                     </Card.Body>
                 </Card>
             </span>
@@ -22,4 +22,4 @@ class ExperimentCard extends Component {
     }
 }
 
-export default ExperimentCard;
+export default withRouter(ExperimentCard);

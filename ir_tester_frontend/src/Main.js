@@ -38,7 +38,7 @@ class Main extends Component {
         return (
             <Router>
                 <Switch>
-                    <Route path="/experiment" exact>
+                    <Route path="/experiment/:experimentID" exact>
                         <Experiment experimentNumber={this.state.experimentNum}/>
                     </Route>                    
                     <Route path="/">

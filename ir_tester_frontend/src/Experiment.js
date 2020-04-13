@@ -5,7 +5,7 @@ class Experiment extends Component {
     render() {
         return (
             <p>
-                Hi experiment { this.props.experimentNumber }!
+                Hi experiment { this.props.match.params.experimentID }!
             </p>
         )
     }
