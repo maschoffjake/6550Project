@@ -6,7 +6,7 @@ class ExperimentResult extends Component {
         console.log(this.props);
         return (
             <div id="result">
-                {this.props.link}
+                <a href={this.props.link} dangerouslySetInnerHTML={{__html:this.props.title}} />
                 <br />
                 <div id="summary" dangerouslySetInnerHTML={{__html:this.props.summary}}/>   {/* Need to do this since HTML is returned... */}
                 <div id="meta">

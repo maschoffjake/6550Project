@@ -19,7 +19,7 @@ class Experiment extends Component {
     render() {
         return (
             this.state.experiments.map((item) => (
-                <ExperimentResult link={item.Link} summary={item.Summary} meta={item.Meta} score={item.Score} document={item.Document}/>
+                <ExperimentResult title={item.Title} link={item.Link} summary={item.Summary} meta={item.Meta} score={item.Score} document={item.Document}/>
             ))
         );
     }

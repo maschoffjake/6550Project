@@ -32,3 +32,10 @@
 2020-04-13T15:05:18.947:experiment1:query:dinosaur
 2020-04-13T15:05:54.741:experiment1:query:police
 2020-04-13T15:06:00.787:experiment1:query:dinosaur
+2020-04-13T15:09:28.653:experiment1:query:dinosaur
+2020-04-13T15:10:40.128:experiment1:query:dinosaur
+2020-04-13T15:10:55.401:experiment1:query:dinosaur
+2020-04-13T15:11:10.108:experiment1:query:dinosaur
+2020-04-13T15:11:16.502:experiment1:query:dinosaur
+2020-04-13T15:13:23.869:experiment1:query:dinosaur
+2020-04-13T15:13:28.078:experiment1:query:dinosaur
