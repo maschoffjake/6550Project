@@ -24,7 +24,7 @@ class Experiment extends Component {
      */
     async componentDidMount() {
         console.log('Making call')
-        const experimentData = await API.get(`/experiment${this.props.match.params.experimentID}`);
+        const experimentData = await API.get(`/experiment/${this.props.match.params.experimentID}`);
         console.log('Data back:' + experimentData);
     }
 }

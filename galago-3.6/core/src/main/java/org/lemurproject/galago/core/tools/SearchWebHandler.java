@@ -486,6 +486,7 @@ public class SearchWebHandler implements WebHandler {
   }
 
   public void handle(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    System.out.println("Handling request");
     if (request.getPathInfo().equals("/search")) {
       try {
         handleSearch(request, response);
