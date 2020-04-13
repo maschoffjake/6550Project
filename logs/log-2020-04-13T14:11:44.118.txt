@@ -56,3 +56,8 @@
 2020-04-13T15:21:27.573:experiment2:query:world war 2
 2020-04-13T15:21:29.768:experiment1:query:dinosaur
 2020-04-13T15:24:23.728:experiment1:query:dinosaur
+2020-04-13T15:30:29.375:experiment1:query:dinosaur
+2020-04-13T15:31:00.989:doc:Hi_Hi_Puffy_AmiYumi~_Kaznapped!_ccb6
+2020-04-13T15:32:30.915:experiment1:query:dinosaur
+2020-04-13T15:32:44.697:experiment1:query:dinosaur
+2020-04-13T15:32:51.848:experiment1:query:dinosaur

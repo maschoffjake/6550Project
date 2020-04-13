@@ -10,9 +10,12 @@ class Main extends Component {
                 <Switch>
                     <Route path="/experiment/:experimentID" exact>
                         <Experiment />
+                    </Route>
+                    <Route path="/document">
+                        
                     </Route>                    
                     <Route path="/">
-                        <LandingPage />
+                        <LandingPage exact/>
                     </Route>
                 </Switch>
             </Router>

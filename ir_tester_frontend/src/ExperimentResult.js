@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './Experiment.css';
+import {Link} from 'react-router-dom';
 
 class ExperimentResult extends Component {
     render() {
+        const path = `/document?identifier=${this.props.link}`;
         return (
             <div id="result">
-                <a href={this.props.link} dangerouslySetInnerHTML={{__html:this.props.title}} />
+                <Link to={path} dangerouslySetInnerHTML={{__html:this.props.title}} />
                 <br />
                 <div id="summary" dangerouslySetInnerHTML={{__html:this.props.summary}}/>   {/* Need to do this since HTML is returned... */}
                 <div id="meta">
