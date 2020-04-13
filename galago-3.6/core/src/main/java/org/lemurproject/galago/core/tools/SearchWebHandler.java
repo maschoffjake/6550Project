@@ -476,13 +476,52 @@ public class SearchWebHandler implements WebHandler {
    * @param request
    * @param response
    */
-  public void handleExperiments(HttpServletRequest request, HttpServletResponse response) {
+  public void handleExperiments(HttpServletRequest request, HttpServletResponse response) throws Exception {
     // Grab the experiment number
     String path = request.getPathInfo();
     String experNum = path.substring(path.length() - 1);  // Last digit of path
     int experimentNumber = Integer.parseInt(experNum);
     
     System.out.println("Serving experiment" + experimentNumber);
+
+    // Perform this search
+    SearchResult result = performSearch(request, true);
+    response.setContentType("text/html");
+    String displayQuery = scrub(request.getParameter("q"));
+
+    // Log this info this time stamp
+    this.log.write(LocalDateTime.now().toString() + ":experiment" + experimentNumber + ":query:" + displayQuery + "\n");
+    this.log.flush();
+
+    // Respond
+    PrintWriter writer = response.getWriter();
+    for (SearchResultItem item : result.items) {
+      System.out.println(item.document.toString());
+      writer.append("<div id=\"result\">\n");
+      writer.append(String.format("<a href=\"document?identifier=%s\">%s</a><br/>"
+              + "<div id=\"summary\">%s</div>\n"
+              + "<div id=\"meta\">%s - %s - %.2f</div>\n",
+              item.identifier,
+              item.displayTitle,
+              item.summary,
+              scrub(item.identifier),
+              scrub(item.url),
+              item.score));
+      writer.append("</div>\n");
+    }
+
+    String startAtString = request.getParameter("start");
+    String countString = request.getParameter("n");
+    int startAt = 0;
+    int count = 10;
+
+    if (startAtString != null) {
+      startAt = Integer.parseInt(startAtString);
+    }
+    if (countString != null) {
+      count = Integer.parseInt(countString);
+    }
+    
   }
 
   public void handle(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -496,7 +535,11 @@ public class SearchWebHandler implements WebHandler {
       }
     } 
     else if (request.getPathInfo().contains("/experiment")) {
-      handleExperiments(request, response);
+      try {
+        handleExperiments(request, response);
+      } catch (Exception e) {
+        System.out.print(e.toString());
+      }
     } else if (request.getPathInfo().equals("/document")) {
       handleDocument(request, response);
     } else if (request.getPathInfo().equals("/searchxml")) {
