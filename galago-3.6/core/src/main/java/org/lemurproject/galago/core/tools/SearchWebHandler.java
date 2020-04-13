@@ -513,7 +513,6 @@ public class SearchWebHandler implements WebHandler {
       retArray.put(experiment);
     }
     // Send the JSONArray
-    System.out.println("Sending:" + retArray.toString(4));
     writer.append(retArray.toString());
     writer.close();
   }
