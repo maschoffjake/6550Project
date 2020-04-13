@@ -16,10 +16,10 @@ class LandingPage extends Component {
             
             {/* Button row */}
             <div className="cardDeck">
-              <ExperimentCard experimentNum={1} callback={this.props.callback} description={getExperiment1Description()} />
-              <ExperimentCard experimentNum={2} callback={this.props.callback} description={getExperiment2Description()} />
-              <ExperimentCard experimentNum={3} callback={this.props.callback} description={getExperiment3Description()} />
-              <ExperimentCard experimentNum={4} callback={this.props.callback} description={getExperiment4Description()} />
+              <ExperimentCard experimentNum={1}  description={getExperiment1Description()} />
+              <ExperimentCard experimentNum={2}  description={getExperiment2Description()} />
+              <ExperimentCard experimentNum={3}  description={getExperiment3Description()} />
+              <ExperimentCard experimentNum={4}  description={getExperiment4Description()} />
             </div>
   
         </Jumbotron>
