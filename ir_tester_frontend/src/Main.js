@@ -4,10 +4,6 @@ import Experiment from './Experiment';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class Main extends Component {
-    constructor() {
-        super()
-    }
-
     render() {
         return (
             <Router>

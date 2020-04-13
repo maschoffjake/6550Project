@@ -25,6 +25,9 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.Map.Entry;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 /**
  * <p>Handles web search requests against a Galago index. Also handles XML
  * requests for documents, snippets and search results.</p>
@@ -479,14 +482,18 @@ public class SearchWebHandler implements WebHandler {
   public void handleExperiments(HttpServletRequest request, HttpServletResponse response) throws Exception {
     // Grab the experiment number
     String path = request.getPathInfo();
-    String experNum = path.substring(path.length() - 1);  // Last digit of path
+    int positionOfSlash = path.lastIndexOf('/');
+    String experNum = path.substring(positionOfSlash + 1, positionOfSlash + 2);  // Right after last slash
     int experimentNumber = Integer.parseInt(experNum);
     
     System.out.println("Serving experiment" + experimentNumber);
 
+    // Add CORS policy
+    response.addHeader("Access-Control-Allow-Origin", "*");
+
     // Perform this search
     SearchResult result = performSearch(request, true);
-    response.setContentType("text/html");
+    response.setContentType("application/json");
     String displayQuery = scrub(request.getParameter("q"));
 
     // Log this info this time stamp
@@ -495,33 +502,20 @@ public class SearchWebHandler implements WebHandler {
 
     // Respond
     PrintWriter writer = response.getWriter();
+    JSONArray retArray = new JSONArray();
     for (SearchResultItem item : result.items) {
-      System.out.println(item.document.toString());
-      writer.append("<div id=\"result\">\n");
-      writer.append(String.format("<a href=\"document?identifier=%s\">%s</a><br/>"
-              + "<div id=\"summary\">%s</div>\n"
-              + "<div id=\"meta\">%s - %s - %.2f</div>\n",
-              item.identifier,
-              item.displayTitle,
-              item.summary,
-              scrub(item.identifier),
-              scrub(item.url),
-              item.score));
-      writer.append("</div>\n");
+      JSONObject experiment = new JSONObject();
+      experiment.put("Link", item.identifier);
+      experiment.put("Title", item.displayTitle);
+      experiment.put("Summary", item.summary);
+      experiment.put("Score", item.score);
+      experiment.put("Document", item.document.toString());
+      retArray.put(experiment);
     }
-
-    String startAtString = request.getParameter("start");
-    String countString = request.getParameter("n");
-    int startAt = 0;
-    int count = 10;
-
-    if (startAtString != null) {
-      startAt = Integer.parseInt(startAtString);
-    }
-    if (countString != null) {
-      count = Integer.parseInt(countString);
-    }
-    
+    // Send the JSONArray
+    System.out.println("Sending:" + retArray.toString(4));
+    writer.append(retArray.toString());
+    writer.close();
   }
 
   public void handle(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
