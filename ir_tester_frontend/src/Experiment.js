@@ -14,10 +14,10 @@ class Experiment extends Component {
     }
     render() {
         return (
-            this.state.experiments.map((item) => {
-                <ExperimentResult />
-            })
-        )
+            this.state.experiments.map((item) => (
+                <ExperimentResult link={item.Link} summary={item.Summary} meta={item.Meta} score={item.Score} document={item.Document}/>
+            ))
+        );
     }
 
     /**
@@ -30,13 +30,13 @@ class Experiment extends Component {
             case "1":
                 query += '?q=dinosaur';
                 break;
-            case 2:
+            case "2":
                 query += '?q=world+war+2';
                 break;
-            case 3:
+            case "3":
                 query += '?q=weather';
                 break;
-            case 4:
+            case "4":
                 query += '?q=police';
                 break;
             default:

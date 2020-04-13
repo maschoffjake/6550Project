@@ -8,3 +8,11 @@
 2020-04-13T14:24:02.547:experiment1:query:dinosaur
 2020-04-13T14:29:37.756:experiment1:query:dinosaur
 2020-04-13T14:29:46.834:experiment1:query:dinosaur
+2020-04-13T14:44:21.637:experiment1:query:dinosaur
+2020-04-13T14:44:52.394:experiment1:query:dinosaur
+2020-04-13T14:45:45.468:experiment1:query:dinosaur
+2020-04-13T14:47:02.662:experiment1:query:dinosaur
+2020-04-13T14:47:36.573:experiment1:query:dinosaur
+2020-04-13T14:47:55.554:experiment1:query:dinosaur
+2020-04-13T14:48:45.273:experiment1:query:dinosaur
+2020-04-13T14:49:20.216:experiment2:query:world war 2
