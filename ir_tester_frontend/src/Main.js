@@ -39,7 +39,7 @@ class Main extends Component {
             <Router>
                 <Switch>
                     <Route path="/experiment/:experimentID" exact>
-                        <Experiment experimentNumber={this.state.experimentNum}/>
+                        <Experiment />
                     </Route>                    
                     <Route path="/">
                         <LandingPage callback={this.changeToExperimentCallback}/>
