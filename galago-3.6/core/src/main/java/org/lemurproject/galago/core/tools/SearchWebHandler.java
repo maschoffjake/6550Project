@@ -569,7 +569,7 @@ public class SearchWebHandler implements WebHandler {
       } catch (Exception e) {
         System.out.print(e.toString());
       }
-    } else if (request.getPathInfo().contains("/experimentsuccess")) {
+    } else if (request.getPathInfo().contains("/success")) {
       try {
         handleExperimentSuccess(request, response);
       } catch (Exception e) {
