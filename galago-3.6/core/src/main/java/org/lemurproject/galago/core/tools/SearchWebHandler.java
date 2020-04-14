@@ -523,6 +523,36 @@ public class SearchWebHandler implements WebHandler {
     writer.close();
   }
 
+  /**
+   * Added code used for handling experiments specific to our project
+   * @param request
+   * @param response
+   */
+  public void handleExperimentSuccess(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    // Grab the experiment number
+    String path = request.getPathInfo();
+    int positionOfSlash = path.lastIndexOf('/');
+    String experNum = path.substring(positionOfSlash + 1, positionOfSlash + 2);  // Right after last slash
+    int experimentNumber = Integer.parseInt(experNum);
+
+    // Add CORS policy
+    response.addHeader("Access-Control-Allow-Origin", "*");
+
+    System.out.println("logging experiment success: " + experimentNumber);
+
+    // Log this info this time stamp
+    this.log.write(LocalDateTime.now().toString() + ":experiment" + experimentNumber + ":SUCCESS\n");
+    this.log.flush();
+
+    // Respond
+    PrintWriter writer = response.getWriter();
+    response.setContentType("text/xml");
+    writer.append("<response>\n");
+    writer.append("SUCCESS");
+    writer.append("</response>");
+    writer.close();
+  }
+
   public void handle(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
     System.out.println("Handling request");
     if (request.getPathInfo().equals("/search")) {
@@ -539,7 +569,13 @@ public class SearchWebHandler implements WebHandler {
       } catch (Exception e) {
         System.out.print(e.toString());
       }
-    } else if (request.getPathInfo().equals("/document")) {
+    } else if (request.getPathInfo().contains("/experimentsuccess")) {
+      try {
+        handleExperimentSuccess(request, response);
+      } catch (Exception e) {
+        System.out.print(e.toString());
+      }
+    }else if (request.getPathInfo().equals("/document")) {
       handleDocument(request, response);
     } else if (request.getPathInfo().equals("/searchxml")) {
       try {
