@@ -8,14 +8,15 @@ class Document extends Component {
         super(props);
         this.state = {
             isLoaded: false,
-            docData: null
+            docData: null,
+            experimentNumber: this.props.match.params.experimentID
         }
     }
     render() {
         return (
             <div id="document" dangerouslySetInnerHTML={{__html:this.state.docData}}/>
-            <FinishExperiment/>
-        )
+            <FinishExperiment experimentNum={this.state.experimentNumber}/>
+        );
     }
 
     /**
