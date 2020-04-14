@@ -8,3 +8,50 @@
 2020-04-13T16:13:45.368:experiment2:query:world war 2
 2020-04-13T16:13:46.247:doc:Our_Worlds_at_War_7584
 2020-04-13T16:13:47.318:experiment2:query:world war 2
+2020-04-13T16:14:28.068:experiment2:query:world war 2
+2020-04-13T16:14:29.110:doc:List_of_WWE_Hardcore_Champions_3154
+2020-04-13T16:14:30.790:experiment2:query:world war 2
+2020-04-13T16:14:48.982:query:list of WWE 
+2020-04-13T16:14:51.297:doc:List_of_World_Heavyweight_Champions_(WWE)_9071
+2020-04-13T16:15:29.378:doc:List_of_WWE_Hardcore_Champions_3154
+2020-04-13T16:15:51.483:doc:List_of_World_Heavyweight_Champions_(WWE)_9071
+2020-04-13T16:16:09.362:doc:List_of_World_Heavyweight_Champions_(WWE)_9071
+2020-04-13T16:16:17.899:doc:List_of_World_Heavyweight_Champions_(WWE)_9071
+2020-04-13T16:16:25.254:doc:List_of_World_Heavyweight_Champions_(WWE)_9071
+2020-04-13T16:17:17.734:experiment2:query:world war 2
+2020-04-13T16:17:20.046:experiment3:query:weather
+2020-04-13T16:17:21.338:doc:9th_Operational_Weather_Squadron_(United_States)_c305
+2020-04-13T17:06:29.214:experiment3:query:weather
+2020-04-13T17:06:31.483:experiment2:query:world war 2
+2020-04-13T17:06:33.807:experiment1:query:dinosaur
+2020-04-13T17:06:36.016:experiment1:query:dinosaur
+2020-04-13T17:06:39.047:experiment1:query:dinosaur
+2020-04-13T17:06:41.827:doc:Cultural_depictions_of_dinosaurs
+2020-04-13T17:06:43.124:experiment1:query:dinosaur
+2020-04-13T17:06:44.360:doc:Dinosaurs_Attack!_a71c
+2020-04-13T17:06:47.561:experiment1:query:dinosaur
+2020-04-13T17:20:53.530:experiment1:query:dinosaur
+2020-04-13T17:20:58.386:experiment2:query:world war 2
+2020-04-13T17:21:03.462:experiment3:query:weather
+2020-04-13T17:21:06.575:experiment4:query:police
+2020-04-13T17:21:09.601:experiment1:query:dinosaur
+2020-04-13T17:21:10.813:doc:Cultural_depictions_of_dinosaurs
+2020-04-13T17:21:18.923:experiment1:query:dinosaur
+2020-04-13T17:21:24.459:experiment3:query:weather
+2020-04-13T17:21:29.219:experiment1:query:dinosaur
+2020-04-13T17:21:36.672:experiment2:query:world war 2
+2020-04-13T17:22:25.395:experiment1:query:dinosaur
+2020-04-13T17:22:32.776:doc:Styracosaurus
+2020-04-13T17:24:34.811:experiment1:query:dinosaur
+2020-04-13T17:24:52.539:query:asdf
+2020-04-13T17:24:55.722:query:hello
+2020-04-13T17:24:58.302:query:hello
+2020-04-13T18:58:35.891:experiment1:query:dinosaur
+2020-04-13T18:58:37.779:doc:Cultural_depictions_of_dinosaurs
+2020-04-13T18:58:43.653:experiment1:query:dinosaur
+2020-04-13T18:58:49.439:experiment2:query:world war 2
+2020-04-13T18:58:50.492:doc:Lazare_Ponticelli_7a66
+2020-04-13T18:58:52.194:experiment2:query:world war 2
+2020-04-13T18:58:55.192:experiment3:query:weather
+2020-04-13T18:58:56.808:doc:9th_Operational_Weather_Squadron_(United_States)_c305
+2020-04-13T18:58:58.519:experiment3:query:weather

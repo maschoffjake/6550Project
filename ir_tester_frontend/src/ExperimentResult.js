@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 class ExperimentResult extends Component {
     render() {
-        const path = `/document?identifier=${this.props.link}`;
+        const path = `/${this.props.experimentNum}/document?identifier=${this.props.link}`;
         return (
             <div id="result">
                 <Link to={path} dangerouslySetInnerHTML={{__html:this.props.title}} />
