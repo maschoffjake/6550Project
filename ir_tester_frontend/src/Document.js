@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import API from './util/API';
 import {withRouter} from 'react-router-dom';
+import FinishExperiment from './FinishExperiment';
 
 class Document extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class Document extends Component {
     render() {
         return (
             <div id="document" dangerouslySetInnerHTML={{__html:this.state.docData}}/>
+            <FinishExperiment/>
         )
     }
 
