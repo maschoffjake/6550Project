@@ -38,7 +38,7 @@ class FinishExperiment extends Component {
     checkAnswer() {
         switch (this.state.experimentNumber) {
             case "1":
-                if (this.state.answer == "FIXME") {
+                if (this.state.answer === "FIXME") {
                     this.logSuccess();
                     alert("Correct!");
                     window.location.replace("http://localhost:3000/");
@@ -47,7 +47,7 @@ class FinishExperiment extends Component {
                 }
                 break;
             case "2":
-                if (this.state.answer == "FIXME") {
+                if (this.state.answer === "FIXME") {
                     this.logSuccess();
                     alert("Correct!");
                     window.location.replace("http://localhost:3000/");
@@ -56,7 +56,7 @@ class FinishExperiment extends Component {
                 }
                 break;
             case "3":
-                if (this.state.answer == "FIXME") {
+                if (this.state.answer === "FIXME") {
                     this.logSuccess();
                     alert("Correct!");
                     window.location.replace("http://localhost:3000/");
@@ -65,7 +65,7 @@ class FinishExperiment extends Component {
                 }
                 break;
             case "4":
-                if (this.state.answer == "FIXME") {
+                if (this.state.answer === "FIXME") {
                     this.logSuccess();
                     alert("Correct!");
                     window.location.replace("http://localhost:3000/");
