@@ -14,8 +14,10 @@ class Document extends Component {
     }
     render() {
         return (
-            <div id="document" dangerouslySetInnerHTML={{__html:this.state.docData}}/>
-            <FinishExperiment experimentNum={this.state.experimentNumber}/>
+            <div>
+                <div id="document" dangerouslySetInnerHTML={{__html:this.state.docData}}/>
+                <FinishExperiment experimentNum={this.state.experimentNumber}/>
+            </div>
         );
     }
 

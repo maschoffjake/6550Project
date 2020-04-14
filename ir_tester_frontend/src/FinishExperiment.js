@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom';
+import Card from 'react-bootstrap/Card'
 import './FinishExperiment.css';
 import API from './util/API';
 
@@ -8,21 +9,26 @@ class FinishExperiment extends Component {
     constructor(props){
         super(props)
         this.state = {
-            experimentNumber: this.props.match.params.experimentID
+            experimentNumber: this.props.experimentNum,
+            answer: ''
         }
+        this.onChangeAnswer = this.onChangeAnswer.bind(this)
+        this.checkAnswer = this.checkAnswer.bind(this)
     }
 
     render() {
-        <div class="Finish">
-            <Card>
-              <Card.Header as="h5">Finish Experiment {this.props.experimentNum}</Card.Header>
-                <Card.Body>
-                  <input type=”text” name=”answer” value={this.state.answer}
-                      onChange={this.onChangeAnswer.bind(this)}/>
-                  <button className="btn btn-success" onclick={this.checkAnswer}> Check Answer {this.props.experimentNum}</button>
-                </Card.Body>
-            </Card>
-        </div>
+        return(
+            <div className="Finish">
+                <Card>
+                  <Card.Header as="h5">Finish Experiment {this.props.experimentNum}</Card.Header>
+                    <Card.Body>
+                      <input type="text" name="answer" value={this.state.answer}
+                          onChange={this.onChangeAnswer}/>
+                      <button className="btn btn-success" onClick={this.checkAnswer}> Check Answer </button>
+                    </Card.Body>
+                </Card>
+            </div>
+        );
     }
 
     onChangeAnswer(event) {
@@ -33,38 +39,38 @@ class FinishExperiment extends Component {
         switch (this.state.experimentNumber) {
             case "1":
                 if (this.state.answer == "FIXME") {
-                    logSuccess();
+                    this.logSuccess();
                     alert("Correct!");
                     window.location.replace("http://localhost:3000/");
                 } else {
-                    handleFailure();
+                    this.handleFailure();
                 }
                 break;
             case "2":
                 if (this.state.answer == "FIXME") {
-                    logSuccess();
+                    this.logSuccess();
                     alert("Correct!");
                     window.location.replace("http://localhost:3000/");
                 } else {
-                    handleFailure();
+                    this.handleFailure();
                 }
                 break;
             case "3":
                 if (this.state.answer == "FIXME") {
-                    logSuccess();
+                    this.logSuccess();
                     alert("Correct!");
                     window.location.replace("http://localhost:3000/");
                 } else {
-                    handleFailure();
+                    this.handleFailure();
                 }
                 break;
             case "4":
                 if (this.state.answer == "FIXME") {
-                    logSuccess();
+                    this.logSuccess();
                     alert("Correct!");
                     window.location.replace("http://localhost:3000/");
                 } else {
-                    handleFailure();
+                    this.handleFailure();
                 }
                 break;
             default:
@@ -75,7 +81,7 @@ class FinishExperiment extends Component {
 
 
     async logSuccess() {
-        const experimentSuccess = await API.post(`/experimentsuccess/${this.state.experimentNumber}`,
+        const experimentSuccess = await API.get(`/success/${this.state.experimentNumber}`,
                                                 {
                                                     responseType: 'xml'
                                                 });
