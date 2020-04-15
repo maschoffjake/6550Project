@@ -10,6 +10,7 @@ class FinishExperiment extends Component {
         super(props)
         this.state = {
             experimentNumber: this.props.experimentNum,
+            experimentQuestion: this.props.experimentQuestion,
             answer: ''
         }
         this.onChangeAnswer = this.onChangeAnswer.bind(this)
@@ -22,7 +23,8 @@ class FinishExperiment extends Component {
                 <Card>
                   <Card.Header as="h5">Finish Experiment {this.props.experimentNum}</Card.Header>
                     <Card.Body>
-                      <input type="text" name="answer" value={this.state.answer}
+                    <Card.Text>{this.state.experimentQuestion}</Card.Text>
+                     <input type="text" name="answer" value={this.state.answer}
                           onChange={this.onChangeAnswer}/>
                       <button className="btn btn-success" onClick={this.checkAnswer}> Check Answer </button>
                     </Card.Body>
