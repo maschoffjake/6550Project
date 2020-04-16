@@ -65,7 +65,7 @@ public class SearchWebHandler implements WebHandler {
       String fileName = new SimpleDateFormat("yyyyMMddHHmm'.txt'").format(new Date());
 
       // Create log document for recording documents visited, queries searched, and times that they were done
-      File documentFile = new File("logs/log-" + fileName + ".txt");
+      File documentFile = new File("logs/log-" + fileName);
       FileWriter logWriter = new FileWriter(documentFile);
       this.log = new BufferedWriter(logWriter);
 
