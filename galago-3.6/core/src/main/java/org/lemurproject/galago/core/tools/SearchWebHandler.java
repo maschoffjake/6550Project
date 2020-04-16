@@ -62,10 +62,6 @@ public class SearchWebHandler implements WebHandler {
       FileWriter logWriter = new FileWriter(documentFile);
       this.log = new BufferedWriter(logWriter);
 
-      // Give a starting time, to when the server started
-      this.log.write(LocalDateTime.now().toString() + ":start\n");
-      this.log.flush();
-
     } catch (IOException e) {
       System.out.println("ERROR unable to create logs! Exiting");
       System.exit(-1);;
@@ -492,18 +488,15 @@ public class SearchWebHandler implements WebHandler {
     String experNum = path.substring(positionOfSlash + 1, positionOfSlash + 2);  // Right after last slash
     int experimentNumber = Integer.parseInt(experNum);
     
-    System.out.println("Serving experiment" + experimentNumber);
-
     // Add CORS policy
     response.addHeader("Access-Control-Allow-Origin", "*");
 
     // Perform this search
     SearchResult result = performSearch(request, true);
     response.setContentType("application/json");
-    String displayQuery = scrub(request.getParameter("q"));
 
     // Log this info this time stamp
-    this.log.write(LocalDateTime.now().toString() + ":experiment" + experimentNumber + ":query:" + displayQuery + "\n");
+    this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
     this.log.flush();
 
     // Respond
@@ -621,7 +614,7 @@ public class SearchWebHandler implements WebHandler {
     String retGroup = (request.getParameterValues("subset") == null) ? "all" : request.getParameterValues("subset")[0];
     String qtype = (request.getParameterValues("qtype") == null) ? "complex" : request.getParameterValues("qtype")[0];
     int startAt = (startAtString == null) ? 0 : Integer.parseInt(startAtString);
-    int resultCount = (countString == null) ? 10 : Integer.parseInt(countString);
+    int resultCount = (countString == null) ? 50 : Integer.parseInt(countString);
 
     Parameters p = new Parameters();
     p.set("indexId", id);
