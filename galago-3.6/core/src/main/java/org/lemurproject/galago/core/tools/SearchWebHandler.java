@@ -89,7 +89,6 @@ public class SearchWebHandler implements WebHandler {
     String identifier = request.getParameter("identifier");
     identifier = URLDecoder.decode(identifier, "UTF-8");
     DocumentComponents p = new DocumentComponents(true, true, false);
-    System.out.println("1");
     Document document = search.getDocument(identifier, p);
     response.setContentType("text/html; charset=UTF-8");
     // Add CORS policy
@@ -103,7 +102,6 @@ public class SearchWebHandler implements WebHandler {
     this.log.write(LocalDateTime.now().toString() + ":doc:" + filename + "\n");
     this.log.flush();
 
-    System.out.println("2");
     
     writer.write(document.name);
     writer.write("<p>");
@@ -120,7 +118,6 @@ public class SearchWebHandler implements WebHandler {
 
     writer.write("TEXT:");
     writer.write(getEscapedString(document.text));
-    System.out.println("returning:" + document.text);
     writer.close();
   }
 
@@ -232,7 +229,6 @@ public class SearchWebHandler implements WebHandler {
     writer.append("</div>");
 
     for (SearchResultItem item : result.items) {
-      System.out.println(item.document.toString());
       writer.append("<div id=\"result\">\n");
       writer.append(String.format("<a href=\"document?identifier=%s\">%s</a><br/>"
               + "<div id=\"summary\">%s</div>\n"
@@ -531,8 +527,6 @@ public class SearchWebHandler implements WebHandler {
     // Add CORS policy
     response.addHeader("Access-Control-Allow-Origin", "*");
 
-    System.out.println("logging experiment success: " + experimentNumber);
-
     // Log this info this time stamp
     this.log.write(LocalDateTime.now().toString() + ":experiment" + experimentNumber + ":SUCCESS\n");
     this.log.flush();
@@ -547,7 +541,7 @@ public class SearchWebHandler implements WebHandler {
   }
 
   public void handle(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-    System.out.println("Handling request");
+    System.out.println("Handling request " + request.getPathInfo());
     if (request.getPathInfo().equals("/search")) {
       try {
         handleSearch(request, response);
@@ -605,7 +599,6 @@ public class SearchWebHandler implements WebHandler {
 
   protected SearchResult performSearch(HttpServletRequest request, boolean snippets) throws Exception {
     String query = request.getParameter("q");
-    System.out.println("q="+query);
     String transformString = request.getParameter("transform");
     boolean doTransform = Boolean.parseBoolean(transformString == null ? "true" : transformString);
     String startAtString = request.getParameter("start");
