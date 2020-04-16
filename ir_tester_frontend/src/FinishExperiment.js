@@ -40,7 +40,7 @@ class FinishExperiment extends Component {
     checkAnswer() {
         switch (this.state.experimentNumber) {
             case "1":
-                if (this.state.answer === "FIXME") {
+                if (this.state.answer.toLowerCase() === "styracosaurus") {
                     this.logSuccess();
                     alert("Correct! Done with experiment 1. Click OK to return to the homepage.");
                     window.location.replace("http://localhost:3000/");
@@ -49,7 +49,7 @@ class FinishExperiment extends Component {
                 }
                 break;
             case "2":
-                if (this.state.answer === "FIXME") {
+                if (this.state.answer === "-51" || this.state.answer === "-51.4") {
                     this.logSuccess();
                     alert("Correct! Done with experiment 2. Click OK to return to the homepage.");
                     window.location.replace("http://localhost:3000/");
@@ -58,7 +58,7 @@ class FinishExperiment extends Component {
                 }
                 break;
             case "3":
-                if (this.state.answer === "FIXME") {
+                if (this.state.answer.toLowerCase() === "ussr" || this.state.answer.toLowerCase() === "soviet union") {
                     this.logSuccess();
                     alert("Correct! Done with experiment 3. Click OK to return to the homepage.");
                     window.location.replace("http://localhost:3000/");
@@ -67,7 +67,7 @@ class FinishExperiment extends Component {
                 }
                 break;
             case "4":
-                if (this.state.answer === "FIXME") {
+                if (this.state.answer.toLowerCase === "greyhound" || this.state.answer.toLowerCase() === 'italian greyhound') {
                     this.logSuccess();
                     alert("Correct! Done with experiment 4. Click OK to return to the homepage.");
                     window.location.replace("http://localhost:3000/");

@@ -17,16 +17,16 @@ class Document extends Component {
         let question = "";
         switch (this.state.experimentNumber) {
             case "1":
-                question = "Question for Experiment 1: Dinosaur";
+                question = "Question for Experiment 1: What dinosaur species is known to resemble a rhinoceros?";
                 break;
             case "2":
-                question = "Question for Experiment 2: WW2";;
+                question = "Question for Experiment 2: What was the coldest temperature ever recorded in Finmark? (in °C)";;
                 break;
             case "3":
-                question = "Question for Experiment 3: Weather";
+                question = "Question for Experiment 3: Who won the men's gold medal in basketball at the 1988 Olympic Games?";
                 break;
             case "4":
-                question = "Question for Experiment 4: Police";
+                question = "Question for Experiment 4: What dog breed is good with children and makes a good companion?";
                 break;
             default:
                 console.log('Not a valid experiment number: ' + this.state.experimentNumber);

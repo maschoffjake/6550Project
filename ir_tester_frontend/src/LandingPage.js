@@ -9,7 +9,7 @@ class LandingPage extends Component {
   render() {
     return (
       <header className="App-header">
-        <Jumbotron fluid>
+        <Jumbotron style={{ backgroundColor: '#1d5d99'}} fluid>
             <h1 className="projectTitle">Rating of Search Engine Properties</h1>
             <h2 className="authors">Jake Maschoff, Melvin Bosnjak, Bond Denhalter</h2>
             <h2 className="info">Click any of the experiment buttons to begin an experiment!</h2>

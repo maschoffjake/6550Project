@@ -11,10 +11,10 @@ class Experiment extends Component {
             experiments: [],
             experimentNumber: this.props.match.params.experimentID
         }
-        this.experiment1Query = 'dinosaur';
-        this.experiment2Query = 'world+war+2';
-        this.experiment3Query = 'weather';
-        this.experiment4Query = 'police';
+        this.experiment1Query = 'dinosaur+species';
+        this.experiment2Query = 'coldest+temperature';
+        this.experiment3Query = 'basketball';
+        this.experiment4Query = 'dog+breeds';
     }
     render() {
         return (
