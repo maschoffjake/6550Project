@@ -34,8 +34,8 @@ function getExperiment1Description() {
 
 function getExperiment2Description() {
   return 'Only the relevance score will be shown for the relevant documents. The relevance score is how relevant the '
-  + 'information retreival model deems the document to be. IE the higher the score, the more relevant it is to your query, '
-  + 'and the lower your score the less relevant it is to your query.'
+  + 'information retreival model deems the document to be. IE the LOWER the score, the more relevant it is to your query, '
+  + 'and the higher your score the less relevant it is to your query.'
 }
 
 function getExperiment3Description() {
@@ -44,7 +44,7 @@ function getExperiment3Description() {
 }
 
 function getExperiment4Description() {
-  return 'Only the document length for the relevant documents are shown.'
+  return 'Control experiment! Everything will be displayed, including the document name, relevance score, and snippets.'
 }
 
 export default withRouter(LandingPage);

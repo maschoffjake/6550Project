@@ -1,1 +1,14 @@
 2020-04-15T21:14:49.300:doc:HMS_Erebus_(I02)_4a56
+2020-04-15T21:16:14.413:start:experiment2
+2020-04-15T21:16:17.065:start:experiment1
+2020-04-15T21:16:19.425:doc:Cultural_depictions_of_dinosaurs
+2020-04-15T21:16:20.941:back:experiment1
+2020-04-15T21:16:24.580:back:experiment2
+2020-04-15T21:16:26.949:start:experiment3
+2020-04-15T21:19:05.524:back:experiment2
+2020-04-15T21:20:04.915:experiment2:SUCCESS
+2020-04-15T21:22:42.978:back:experiment1
+2020-04-15T21:22:47.242:back:experiment2
+2020-04-15T21:22:53.012:back:experiment3
+2020-04-15T21:23:01.251:start:experiment4
+2020-04-15T21:24:40.813:back:experiment1

@@ -24,6 +24,9 @@ class ExperimentResult extends Component {
                 summary = this.props.summary;
                 break;
             case "4":
+                summary = this.props.summary;
+                title = this.props.title.slice(0, -35);     // Last 35 characters are not needed (wikipedia characters)
+                meta = `Score: ${(this.props.score * -1).toFixed(4)}`;
                 question = "Question for Experiment 4: Police";
                 break;
             default:
