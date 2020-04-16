@@ -67,7 +67,7 @@ class FinishExperiment extends Component {
                 }
                 break;
             case "4":
-                if (this.state.answer.toLowerCase === "greyhound" || this.state.answer.toLowerCase() === 'italian greyhound') {
+                if (this.state.answer.toLowerCase() === "greyhound" || this.state.answer.toLowerCase() === 'italian greyhound') {
                     this.logSuccess();
                     alert("Correct! Done with experiment 4. Click OK to return to the homepage.");
                     window.location.replace("http://localhost:3000/");

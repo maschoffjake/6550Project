@@ -1,5 +1,0 @@
-2020-04-13T20:49:54.138:start
-2020-04-13T20:50:53.193:experiment1:query:dinosaur
-2020-04-13T20:50:54.746:doc:Cultural_depictions_of_dinosaurs
-2020-04-13T20:52:19.320:experiment2:query:world war 2
-2020-04-13T20:52:21.332:doc:List_of_WWE_Hardcore_Champions_3154

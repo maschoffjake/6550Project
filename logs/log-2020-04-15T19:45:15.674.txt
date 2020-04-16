@@ -1,7 +1,0 @@
-2020-04-15T19:45:15.714:start
-2020-04-15T19:47:12.842:experiment1:query:dinosaur
-2020-04-15T19:47:18.602:doc:Cultural_depictions_of_dinosaurs
-2020-04-15T19:47:27.509:experiment1:SUCCESS
-2020-04-15T19:50:08.978:experiment2:query:world war 2
-2020-04-15T20:10:15.629:experiment2:SUCCESS
-2020-04-15T20:10:19.028:experiment3:query:weather

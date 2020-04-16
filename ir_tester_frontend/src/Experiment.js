@@ -13,7 +13,7 @@ class Experiment extends Component {
         }
         this.experiment1Query = 'dinosaur+species';
         this.experiment2Query = 'coldest+temperature';
-        this.experiment3Query = 'basketball';
+        this.experiment3Query = 'basketball+olympics';
         this.experiment4Query = 'dog+breeds';
     }
     render() {

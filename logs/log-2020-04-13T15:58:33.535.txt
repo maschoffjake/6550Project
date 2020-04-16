@@ -1,2 +1,0 @@
-2020-04-13T15:58:33.575:start
-2020-04-13T15:58:44.399:experiment1:query:dinosaur
