@@ -26,6 +26,10 @@
       <version>1.0.b2</version>
       <version>20190722</version>
     </versions>
+<<<<<<< HEAD
     <lastUpdated>20200416175227</lastUpdated>
+=======
+    <lastUpdated>20200416180353</lastUpdated>
+>>>>>>> 90f7339e1906ac816f467ca524c44a5f62fa04de
   </versioning>
 </metadata>

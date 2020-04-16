@@ -21,6 +21,7 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.Map.Entry;
@@ -61,10 +62,10 @@ public class SearchWebHandler implements WebHandler {
     this.search = search;
 
     try {
-      LocalDateTime ldt = LocalDateTime.now();
+      String fileName = new SimpleDateFormat("yyyyMMddHHmm'.txt'").format(new Date());
 
       // Create log document for recording documents visited, queries searched, and times that they were done
-      File documentFile = new File("logs/log-" + ldt.toString() + ".txt");
+      File documentFile = new File("logs/log-" + fileName);
       FileWriter logWriter = new FileWriter(documentFile);
       this.log = new BufferedWriter(logWriter);
 
