@@ -9,7 +9,8 @@ class Experiment extends Component {
         super(props)
         this.state = {
             experiments: [],
-            experimentNumber: this.props.match.params.experimentID
+            experimentNumber: this.props.match.params.experimentID,
+            varianceNum: this.props.match.params.varianceNum
         }
         this.experiment1Query = 'dinosaur+species';
         this.experiment2Query = 'coldest+temperature';
@@ -19,7 +20,7 @@ class Experiment extends Component {
     render() {
         return (
             this.state.experiments.map((item, index) => (
-                <ExperimentResult index={index+1} experimentNum={this.state.experimentNumber} key={item.Title} title={item.Title} link={item.Link} summary={item.Summary} meta={item.Meta} score={item.Score} document={item.Document}/>
+                <ExperimentResult index={index+1} varianceNum={this.state.varianceNum} experimentNum={this.state.experimentNumber} key={item.Title} title={item.Title} link={item.Link} summary={item.Summary} meta={item.Meta} score={item.Score} document={item.Document}/>
             ))
         );
     }

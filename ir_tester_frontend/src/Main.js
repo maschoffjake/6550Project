@@ -9,7 +9,7 @@ class Main extends Component {
         return (
             <Router>
                 <Switch>
-                    <Route path="/experiment/:experimentID" exact>
+                    <Route path="/experiment/:experimentID/:varianceNum" exact>
                         <Experiment />
                     </Route>
                     <Route path="/:experimentID/document">

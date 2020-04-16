@@ -10,28 +10,40 @@ class ExperimentResult extends Component {
         let title = `Document ${this.props.index}`;
         let summary = "";
         let meta = "";
+
         switch (this.props.experimentNum) {
             case "1":
                 question = "Question for Experiment 1: What dinosaur species is known to resemble a rhinoceros?";
-                title = this.props.title.slice(0, -35);     // Last 35 characters are not needed (wikipedia characters)
                 break;
             case "2":
                 question = "Question for Experiment 2: What was the coldest temperature ever recorded in Finmark? (in °C)";
-                summary = `Score: ${(this.props.score * -1).toFixed(4)}`;
                 break;
             case "3":
                 question = "Question for Experiment 3: Who won the men's gold medal in basketball at the 1988 Olympic Games?";
-                summary = this.props.summary;
                 break;
             case "4":
-                summary = this.props.summary;
-                title = this.props.title.slice(0, -35);     // Last 35 characters are not needed (wikipedia characters)
-                meta = `Score: ${(this.props.score * -1).toFixed(4)}`;
                 question = "Question for Experiment 4: What dog breed is good with children and makes a good companion?";
                 break;
             default:
                 console.log('Not a valid experiment number: ' + this.state.experimentNumber);
                 return;
+        }
+
+        switch (this.props.varianceNum) {
+            case "1":
+              title = this.props.title.slice(0, -35);     // Last 35 characters are not needed (wikipedia characters)
+              break;
+            case "2":
+              summary = `Score: ${(this.props.score * -1).toFixed(4)}`;
+              break;
+            case "3":
+              summary = this.props.summary;
+              break;
+            case "4":
+              summary = this.props.summary;
+              title = this.props.title.slice(0, -35);     // Last 35 characters are not needed (wikipedia characters)
+              meta = `Score: ${(this.props.score * -1).toFixed(4)}`;
+              break;
         }
 
         return (
