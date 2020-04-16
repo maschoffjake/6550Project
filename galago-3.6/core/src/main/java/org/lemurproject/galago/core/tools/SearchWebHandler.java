@@ -51,6 +51,12 @@ public class SearchWebHandler implements WebHandler {
   protected Search search;
   protected BufferedWriter log;
 
+  // Flags for logging start experiment
+  protected boolean startedExperiment1;
+  protected boolean startedExperiment2;
+  protected boolean startedExperiment3;
+  protected boolean startedExperiment4;
+
   public SearchWebHandler(Search search) {
     this.search = search;
 
@@ -61,6 +67,11 @@ public class SearchWebHandler implements WebHandler {
       File documentFile = new File("logs/log-" + ldt.toString() + ".txt");
       FileWriter logWriter = new FileWriter(documentFile);
       this.log = new BufferedWriter(logWriter);
+
+      this.startedExperiment1 = false;
+      this.startedExperiment2 = false;
+      this.startedExperiment3 = false;
+      this.startedExperiment4 = false;
 
     } catch (IOException e) {
       System.out.println("ERROR unable to create logs! Exiting");
@@ -491,9 +502,31 @@ public class SearchWebHandler implements WebHandler {
     SearchResult result = performSearch(request, true);
     response.setContentType("application/json");
 
-    // Log this info this time stamp
-    this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
-    this.log.flush();
+    // Log this start of the experiment (if it is the start) otherwise just navigate back to main page
+    if (experimentNumber == 1 && !this.startedExperiment1){
+      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
+      this.log.flush();
+      this.startedExperiment1 = true;
+    }
+    else if (experimentNumber == 2 && !this.startedExperiment2) {
+      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
+      this.log.flush();
+      this.startedExperiment2 = true;
+    }
+    else if (experimentNumber == 3 && !this.startedExperiment3) {
+      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
+      this.log.flush();
+      this.startedExperiment3 = true;
+    }
+    else if (experimentNumber == 4 && !this.startedExperiment4) {
+      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
+      this.log.flush();
+      this.startedExperiment4 = true;
+    }
+    else {
+      this.log.write(LocalDateTime.now().toString() + ":back:experiment" + experimentNumber + "\n");
+      this.log.flush();
+    }
 
     // Respond
     PrintWriter writer = response.getWriter();
