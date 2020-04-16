@@ -113,21 +113,6 @@ public class SearchWebHandler implements WebHandler {
     this.log.write(LocalDateTime.now().toString() + ":doc:" + filename + "\n");
     this.log.flush();
 
-    
-    writer.write(document.name);
-    writer.write("<p>");
-    Map<String, String> metadata = document.metadata;
-    if (metadata != null) {
-        writer.append("META:<br>");
-        for (Map.Entry<String, String> entry : metadata.entrySet()) {
-            writer.write("key: " + entry.getKey());
-            writer.write(" value:" +getEscapedString(entry.getValue()));
-            writer.write("<br>");
-        }
-        writer.write("<p>");
-    }
-
-    writer.write("TEXT:");
     writer.write(getEscapedString(document.text));
     writer.close();
   }

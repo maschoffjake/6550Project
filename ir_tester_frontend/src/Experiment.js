@@ -18,8 +18,8 @@ class Experiment extends Component {
     }
     render() {
         return (
-            this.state.experiments.map((item) => (
-                <ExperimentResult experimentNum={this.state.experimentNumber} key={item.Title} title={item.Title} link={item.Link} summary={item.Summary} meta={item.Meta} score={item.Score} document={item.Document}/>
+            this.state.experiments.map((item, index) => (
+                <ExperimentResult index={index+1} experimentNum={this.state.experimentNumber} key={item.Title} title={item.Title} link={item.Link} summary={item.Summary} meta={item.Meta} score={item.Score} document={item.Document}/>
             ))
         );
     }

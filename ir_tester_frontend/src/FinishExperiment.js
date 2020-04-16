@@ -42,7 +42,7 @@ class FinishExperiment extends Component {
             case "1":
                 if (this.state.answer === "FIXME") {
                     this.logSuccess();
-                    alert("Correct!");
+                    alert("Correct! Done with experiment 1. Click ok to return to the homepage.");
                     window.location.replace("http://localhost:3000/");
                 } else {
                     this.handleFailure();
@@ -51,7 +51,7 @@ class FinishExperiment extends Component {
             case "2":
                 if (this.state.answer === "FIXME") {
                     this.logSuccess();
-                    alert("Correct!");
+                    alert("Correct! Done with experiment 2. Click ok to return to the homepage.");
                     window.location.replace("http://localhost:3000/");
                 } else {
                     this.handleFailure();
@@ -60,7 +60,7 @@ class FinishExperiment extends Component {
             case "3":
                 if (this.state.answer === "FIXME") {
                     this.logSuccess();
-                    alert("Correct!");
+                    alert("Correct! Done with experiment 3. Click ok to return to the homepage.");
                     window.location.replace("http://localhost:3000/");
                 } else {
                     this.handleFailure();
@@ -69,7 +69,7 @@ class FinishExperiment extends Component {
             case "4":
                 if (this.state.answer === "FIXME") {
                     this.logSuccess();
-                    alert("Correct!");
+                    alert("Correct! Done with experiment 4. Click ok to return to the homepage.");
                     window.location.replace("http://localhost:3000/");
                 } else {
                     this.handleFailure();
@@ -83,7 +83,7 @@ class FinishExperiment extends Component {
 
 
     async logSuccess() {
-        const experimentSuccess = await API.get(`/success/${this.state.experimentNumber}`,
+        await API.get(`/success/${this.state.experimentNumber}`,
                                                 {
                                                     responseType: 'xml'
                                                 });
