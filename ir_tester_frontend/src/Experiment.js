@@ -13,7 +13,7 @@ class Experiment extends Component {
             varianceNum: this.props.match.params.varianceNum
         }
         this.experiment1Query = 'dinosaur+species+rhino';
-        this.experiment2Query = 'coldest+temperature+finmark';
+        this.experiment2Query = 'coldest+temperature+finnmark';
         this.experiment3Query = 'texas+county';
         this.experiment4Query = 'dog+breeds+children';
     }

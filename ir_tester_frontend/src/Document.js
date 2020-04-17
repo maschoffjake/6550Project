@@ -20,7 +20,7 @@ class Document extends Component {
                 question = "Question for Experiment 1: What dinosaur species is known to resemble a rhinoceros?";
                 break;
             case "2":
-                question = "Question for Experiment 2: What was the coldest temperature ever recorded in Finmark? (in °C)";;
+                question = "Question for Experiment 2: What was the coldest temperature ever recorded in Finnmark? (in °C)";;
                 break;
             case "3":
                 question = "Question for Experiment 3: What is largest county in Texas by population?";

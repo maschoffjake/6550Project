@@ -35,7 +35,7 @@ class ExperimentCard extends Component {
           question = 'What dinosaur species is known to resemble a rhinoceros?';
           break;
         case 2:
-          question = 'What was the coldest temperature ever recorded in Finmark? (in °C)';
+          question = 'What was the coldest temperature ever recorded in Finnmark? (in °C)';
           break;
         case 3:
           question = 'What is largest county in Texas by population?';
