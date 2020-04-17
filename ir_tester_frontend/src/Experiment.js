@@ -12,10 +12,10 @@ class Experiment extends Component {
             experimentNumber: this.props.match.params.experimentID,
             varianceNum: this.props.match.params.varianceNum
         }
-        this.experiment1Query = 'dinosaur+species';
-        this.experiment2Query = 'coldest+temperature';
+        this.experiment1Query = 'dinosaur+species+rhino';
+        this.experiment2Query = 'coldest+temperature+finmark';
         this.experiment3Query = 'texas+county';
-        this.experiment4Query = 'dog+breeds';
+        this.experiment4Query = 'dog+breeds+children';
     }
     render() {
         let displayQuery = '';
