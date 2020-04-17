@@ -481,8 +481,7 @@ public class SearchWebHandler implements WebHandler {
     String experNum = path.substring(positionOfSlash + 1, positionOfSlash + 2);  // Right after last slash
     int experimentNumber = Integer.parseInt(experNum);
     String variance = request.getParameter("variance");
-    System.out.println(variance);
-    
+        
     // Add CORS policy
     response.addHeader("Access-Control-Allow-Origin", "*");
 

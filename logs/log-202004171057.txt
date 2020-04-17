@@ -1,0 +1,12 @@
+2020-04-17T11:05:54.577:start:experiment1:variance:1
+2020-04-17T11:06:05.286:start:experiment2:variance:2
+2020-04-17T11:07:07.160:back:experiment2:variance:2
+2020-04-17T11:08:24.808:back:experiment2:variance:2
+2020-04-17T11:11:53.341:back:experiment2:variance:2
+2020-04-17T11:11:56.291:back:experiment2:variance:2
+2020-04-17T11:12:03.099:back:experiment2:variance:2
+2020-04-17T11:12:06.583:back:experiment2:variance:2
+2020-04-17T11:12:55.359:back:experiment1:variance:1
+2020-04-17T11:13:33.206:back:experiment1:variance:1
+2020-04-17T11:13:33.722:back:experiment1:variance:1
+2020-04-17T11:14:02.664:back:experiment1:variance:1

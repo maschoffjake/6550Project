@@ -18,10 +18,37 @@ class Experiment extends Component {
         this.experiment4Query = 'dog+breeds';
     }
     render() {
+        let displayQuery = '';
+        switch (this.experimentNumber) {
+            case "1":
+                displayQuery = this.experiment1Query.replace("+", " ")
+                break;
+            case "2":
+                displayQuery = this.experiment2Query.replace("+", " ")
+                break;
+            case "3":
+                displayQuery = this.experiment3Query.replace("+", " ")
+                break
+            default:
+                displayQuery = this.experiment4Query.replace("+", " ")
+                break;
+        }
         return (
-            this.state.experiments.map((item, index) => (
-                <ExperimentResult index={index+1} varianceNum={this.state.varianceNum} experimentNum={this.state.experimentNumber} key={item.Title} title={item.Title} link={item.Link} summary={item.Summary} meta={item.Meta} score={item.Score} document={item.Document}/>
-            ))
+            <div>
+                <span className="query">
+                    Results using query: &nbsp;
+                    <span className="queryResult">
+                        { displayQuery }
+                    </span>
+                </span>
+                <div>
+                    {
+                        this.state.experiments.map((item, index) => (
+                            <ExperimentResult index={index+1} varianceNum={this.state.varianceNum} experimentNum={this.state.experimentNumber} key={item.Title} title={item.Title} link={item.Link} summary={item.Summary} meta={item.Meta} score={item.Score} document={item.Document}/>
+                        ))
+                    }
+                </div>
+            </div>
         );
     }
 

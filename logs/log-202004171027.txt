@@ -74,3 +74,9 @@
 2020-04-17T10:53:13.379:back:experiment2:variance:1
 2020-04-17T10:53:15.306:doc:Climate_of_Pittsburgh,_Pennsylvania_2a69
 2020-04-17T10:53:16.584:back:experiment2:variance:1
+2020-04-17T10:53:48.384:back:experiment3:variance:1
+2020-04-17T10:54:00.352:back:experiment4:variance:2
+2020-04-17T10:54:14.664:back:experiment2:variance:3
+2020-04-17T10:55:23.973:back:experiment4:variance:2
+2020-04-17T10:55:30.847:back:experiment1:variance:1
+2020-04-17T10:55:53.302:experiment1:SUCCESS
