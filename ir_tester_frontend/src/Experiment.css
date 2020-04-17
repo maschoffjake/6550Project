@@ -44,3 +44,11 @@ img {
 #summary { 
     font-size: small; 
 }
+
+.query {
+    font-size: large;
+}
+
+.queryResult {
+    font-weight: bolder;
+}

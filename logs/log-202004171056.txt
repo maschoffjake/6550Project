@@ -1,0 +1,2 @@
+2020-04-17T10:56:56.763:start:experiment1:variance:1
+2020-04-17T10:57:01.579:start:experiment2:variance:2
