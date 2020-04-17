@@ -41,10 +41,12 @@ class ExperimentResult extends Component {
               break;
             case "4":
               summary = this.props.summary;
-              title = this.props.title.slice(0, -35);     // Last 35 characters are not needed (wikipedia characters)
               meta = `Score: ${(this.props.score * -1).toFixed(4)}`;
               break;
         }
+
+        title = this.props.title.slice(0, -35);     // Last 35 characters are not needed (wikipedia characters)
+
 
         return (
             <div>

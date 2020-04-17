@@ -40,7 +40,7 @@ class FinishExperiment extends Component {
     checkAnswer() {
         switch (this.state.experimentNumber) {
             case "1":
-                if (this.state.answer.toLowerCase() === "styracosaurus") {
+                    if (this.state.answer.toLowerCase() === "styracosaurus") {
                     this.logSuccess();
                     alert("Correct! Done with experiment 1. You may safely close this tab.");
                 } else {
