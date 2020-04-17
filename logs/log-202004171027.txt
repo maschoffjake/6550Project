@@ -70,3 +70,7 @@
 2020-04-17T10:39:59.584:back:experiment4:variance:3
 2020-04-17T10:40:02.517:doc:Italian_Greyhound_d4da
 2020-04-17T10:40:05.938:back:experiment4:variance:3
+2020-04-17T10:53:05.424:back:experiment1:variance:3
+2020-04-17T10:53:13.379:back:experiment2:variance:1
+2020-04-17T10:53:15.306:doc:Climate_of_Pittsburgh,_Pennsylvania_2a69
+2020-04-17T10:53:16.584:back:experiment2:variance:1
