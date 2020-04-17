@@ -19,19 +19,19 @@ class Experiment extends Component {
     }
     render() {
         let displayQuery = '';
-        console.log(this.state.experimentNumber)
+        console.log(this.experiment1Query.split("+").join(' '));
         switch (this.state.experimentNumber) {
             case "1":
-                displayQuery = this.experiment1Query.replace("+", " ")
+                displayQuery = this.experiment1Query.split("+").join(' ')
                 break;
             case "2":
-                displayQuery = this.experiment2Query.replace("+", " ")
+                displayQuery = this.experiment2Query.split("+").join(' ')
                 break;
             case "3":
-                displayQuery = this.experiment3Query.replace("+", " ")
+                displayQuery = this.experiment3Query.split("+").join(' ')
                 break
             default:
-                displayQuery = this.experiment4Query.replace("+", " ")
+                displayQuery = this.experiment4Query.split("+").join(' ')
                 break;
         }
         return (
