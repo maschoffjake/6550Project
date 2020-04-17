@@ -507,12 +507,12 @@ public class SearchWebHandler implements WebHandler {
       this.startedExperiment3 = true;
     }
     else if (experimentNumber == 4 && !this.startedExperiment4) {
-      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + ":variance:\n");
+      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + ":variance:" + variance + "\n");
       this.log.flush();
       this.startedExperiment4 = true;
     }
     else {
-      this.log.write(LocalDateTime.now().toString() + ":back:experiment" + experimentNumber + ":variance:\n");
+      this.log.write(LocalDateTime.now().toString() + ":back:experiment" + experimentNumber + ":variance:"  + variance + "\n");
       this.log.flush();
     }
 
