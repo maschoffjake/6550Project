@@ -38,7 +38,7 @@ class ExperimentCard extends Component {
           question = 'What was the coldest temperature ever recorded in Finmark? (in °C)';
           break;
         case 3:
-          question = 'Who won the men\'s gold medal in basketball at the 1988 Olympic Games?';
+          question = 'What is largest county in Texas by population?';
           break;
         case 4:
           question = 'What dog breed is good with children and makes a good companion?';

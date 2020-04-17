@@ -56,7 +56,7 @@ class FinishExperiment extends Component {
                 }
                 break;
             case "3":
-                if (this.state.answer.toLowerCase() === "ussr" || this.state.answer.toLowerCase() === "soviet union") {
+                if (this.state.answer.toLowerCase() === "harris" || this.state.answer.toLowerCase() === "harris county") {
                     this.logSuccess();
                     alert("Correct! Done with experiment 3. You may safely close this tab.");
                 } else {

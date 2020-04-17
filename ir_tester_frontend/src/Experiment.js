@@ -14,12 +14,13 @@ class Experiment extends Component {
         }
         this.experiment1Query = 'dinosaur+species';
         this.experiment2Query = 'coldest+temperature';
-        this.experiment3Query = 'basketball+olympics';
+        this.experiment3Query = 'texas+county';
         this.experiment4Query = 'dog+breeds';
     }
     render() {
         let displayQuery = '';
-        switch (this.experimentNumber) {
+        console.log(this.state.experimentNumber)
+        switch (this.state.experimentNumber) {
             case "1":
                 displayQuery = this.experiment1Query.replace("+", " ")
                 break;

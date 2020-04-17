@@ -23,7 +23,7 @@ class Document extends Component {
                 question = "Question for Experiment 2: What was the coldest temperature ever recorded in Finmark? (in °C)";;
                 break;
             case "3":
-                question = "Question for Experiment 3: Who won the men's gold medal in basketball at the 1988 Olympic Games?";
+                question = "Question for Experiment 3: What is largest county in Texas by population?";
                 break;
             case "4":
                 question = "Question for Experiment 4: What dog breed is good with children and makes a good companion?";
