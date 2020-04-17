@@ -480,6 +480,8 @@ public class SearchWebHandler implements WebHandler {
     int positionOfSlash = path.lastIndexOf('/');
     String experNum = path.substring(positionOfSlash + 1, positionOfSlash + 2);  // Right after last slash
     int experimentNumber = Integer.parseInt(experNum);
+    String variance = request.getParameter("variance");
+    System.out.println(variance);
     
     // Add CORS policy
     response.addHeader("Access-Control-Allow-Origin", "*");
@@ -490,27 +492,27 @@ public class SearchWebHandler implements WebHandler {
 
     // Log this start of the experiment (if it is the start) otherwise just navigate back to main page
     if (experimentNumber == 1 && !this.startedExperiment1){
-      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
+      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + ":variance:" + variance + "\n");
       this.log.flush();
       this.startedExperiment1 = true;
     }
     else if (experimentNumber == 2 && !this.startedExperiment2) {
-      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
+      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + ":variance:" + variance + "\n");
       this.log.flush();
       this.startedExperiment2 = true;
     }
     else if (experimentNumber == 3 && !this.startedExperiment3) {
-      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
+      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + ":variance:" + variance + "\n");
       this.log.flush();
       this.startedExperiment3 = true;
     }
     else if (experimentNumber == 4 && !this.startedExperiment4) {
-      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + "\n");
+      this.log.write(LocalDateTime.now().toString() + ":start:experiment" + experimentNumber + ":variance:\n");
       this.log.flush();
       this.startedExperiment4 = true;
     }
     else {
-      this.log.write(LocalDateTime.now().toString() + ":back:experiment" + experimentNumber + "\n");
+      this.log.write(LocalDateTime.now().toString() + ":back:experiment" + experimentNumber + ":variance:\n");
       this.log.flush();
     }
 

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// $ANTLR 3.0.1 /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g 2020-04-16 11:51:26
-=======
-// $ANTLR 3.0.1 /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g 2020-04-16 12:03:42
->>>>>>> 90f7339e1906ac816f467ca524c44a5f62fa04de
+// $ANTLR 3.0.1 /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g 2020-04-17 10:20:27
 
   package org.lemurproject.galago.tupleflow.typebuilder;
   import java.util.HashMap;
@@ -33,17 +29,17 @@ public class GalagoTypeBuilderParser extends Parser {
         
 
     public String[] getTokenNames() { return tokenNames; }
-    public String getGrammarFileName() { return "/Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g"; }
+    public String getGrammarFileName() { return "/Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g"; }
 
 
 
     // $ANTLR start var_type
-    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:17:1: var_type returns [ FieldSpecification.DataType dataType ] : ( 'bytes' | 'boolean' | 'int' | 'long' | 'short' | 'byte' | 'float' | 'double' | 'String' );
+    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:17:1: var_type returns [ FieldSpecification.DataType dataType ] : ( 'bytes' | 'boolean' | 'int' | 'long' | 'short' | 'byte' | 'float' | 'double' | 'String' );
     public final FieldSpecification.DataType var_type() throws RecognitionException {
         FieldSpecification.DataType dataType = null;
 
         try {
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:17:59: ( 'bytes' | 'boolean' | 'int' | 'long' | 'short' | 'byte' | 'float' | 'double' | 'String' )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:17:59: ( 'bytes' | 'boolean' | 'int' | 'long' | 'short' | 'byte' | 'float' | 'double' | 'String' )
             int alt1=9;
             switch ( input.LA(1) ) {
             case 8:
@@ -100,7 +96,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
             switch (alt1) {
                 case 1 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:18:5: 'bytes'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:18:5: 'bytes'
                     {
                     match(input,8,FOLLOW_8_in_var_type61); 
                      dataType = FieldSpecification.DataType.BYTES; 
@@ -108,7 +104,7 @@ public class GalagoTypeBuilderParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:19:5: 'boolean'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:19:5: 'boolean'
                     {
                     match(input,9,FOLLOW_9_in_var_type71); 
                      dataType = FieldSpecification.DataType.BOOLEAN; 
@@ -116,7 +112,7 @@ public class GalagoTypeBuilderParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:20:5: 'int'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:20:5: 'int'
                     {
                     match(input,10,FOLLOW_10_in_var_type81); 
                      dataType = FieldSpecification.DataType.INT; 
@@ -124,7 +120,7 @@ public class GalagoTypeBuilderParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:21:5: 'long'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:21:5: 'long'
                     {
                     match(input,11,FOLLOW_11_in_var_type91); 
                      dataType = FieldSpecification.DataType.LONG; 
@@ -132,7 +128,7 @@ public class GalagoTypeBuilderParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:22:5: 'short'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:22:5: 'short'
                     {
                     match(input,12,FOLLOW_12_in_var_type101); 
                      dataType = FieldSpecification.DataType.SHORT; 
@@ -140,7 +136,7 @@ public class GalagoTypeBuilderParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:23:5: 'byte'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:23:5: 'byte'
                     {
                     match(input,13,FOLLOW_13_in_var_type111); 
                      dataType = FieldSpecification.DataType.BYTE; 
@@ -148,7 +144,7 @@ public class GalagoTypeBuilderParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:24:5: 'float'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:24:5: 'float'
                     {
                     match(input,14,FOLLOW_14_in_var_type121); 
                      dataType = FieldSpecification.DataType.FLOAT; 
@@ -156,7 +152,7 @@ public class GalagoTypeBuilderParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:25:5: 'double'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:25:5: 'double'
                     {
                     match(input,15,FOLLOW_15_in_var_type131); 
                      dataType = FieldSpecification.DataType.DOUBLE; 
@@ -164,7 +160,7 @@ public class GalagoTypeBuilderParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:26:5: 'String'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:26:5: 'String'
                     {
                     match(input,16,FOLLOW_16_in_var_type141); 
                      dataType = FieldSpecification.DataType.STRING; 
@@ -186,7 +182,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
     // $ANTLR start field_def
-    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:28:1: field_def returns [ FieldSpecification field ] : v= var_type i= ID ';' ;
+    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:28:1: field_def returns [ FieldSpecification field ] : v= var_type i= ID ';' ;
     public final FieldSpecification field_def() throws RecognitionException {
         FieldSpecification field = null;
 
@@ -195,8 +191,8 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
         try {
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:28:48: (v= var_type i= ID ';' )
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:29:5: v= var_type i= ID ';'
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:28:48: (v= var_type i= ID ';' )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:29:5: v= var_type i= ID ';'
             {
             pushFollow(FOLLOW_var_type_in_field_def165);
             v=var_type();
@@ -222,7 +218,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
     // $ANTLR start field_defs
-    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:33:1: field_defs returns [ ArrayList<FieldSpecification> fields ] : (v= field_def )+ ;
+    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:33:1: field_defs returns [ ArrayList<FieldSpecification> fields ] : (v= field_def )+ ;
     public final ArrayList<FieldSpecification> field_defs() throws RecognitionException {
         ArrayList<FieldSpecification> fields = null;
 
@@ -230,11 +226,11 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
         try {
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:33:61: ( (v= field_def )+ )
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:34:5: (v= field_def )+
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:33:61: ( (v= field_def )+ )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:34:5: (v= field_def )+
             {
              fields = new ArrayList<FieldSpecification>(); 
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:35:5: (v= field_def )+
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:35:5: (v= field_def )+
             int cnt2=0;
             loop2:
             do {
@@ -248,7 +244,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:35:6: v= field_def
+            	    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:35:6: v= field_def
             	    {
             	    pushFollow(FOLLOW_field_def_in_field_defs207);
             	    v=field_def();
@@ -284,18 +280,18 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
     // $ANTLR start order_field
-    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:38:1: order_field returns [ OrderedFieldSpecification ord_field ] : ( '+' | '-' ) i= ID ;
+    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:38:1: order_field returns [ OrderedFieldSpecification ord_field ] : ( '+' | '-' ) i= ID ;
     public final OrderedFieldSpecification order_field() throws RecognitionException {
         OrderedFieldSpecification ord_field = null;
 
         Token i=null;
 
         try {
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:38:61: ( ( '+' | '-' ) i= ID )
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:39:5: ( '+' | '-' ) i= ID
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:38:61: ( ( '+' | '-' ) i= ID )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:39:5: ( '+' | '-' ) i= ID
             {
             Direction direction = Direction.ASCENDING;
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:40:5: ( '+' | '-' )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:40:5: ( '+' | '-' )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -313,14 +309,14 @@ public class GalagoTypeBuilderParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:40:6: '+'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:40:6: '+'
                     {
                     match(input,18,FOLLOW_18_in_order_field246); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:40:12: '-'
+                    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:40:12: '-'
                     {
                     match(input,19,FOLLOW_19_in_order_field250); 
                     direction = Direction.DESCENDING;
@@ -349,7 +345,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
     // $ANTLR start order_def
-    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:43:1: order_def returns [ OrderSpecification defs ] : 'order:' (o= order_field )* ';' ;
+    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:43:1: order_def returns [ OrderSpecification defs ] : 'order:' (o= order_field )* ';' ;
     public final OrderSpecification order_def() throws RecognitionException {
         OrderSpecification defs = null;
 
@@ -357,12 +353,12 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
         try {
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:43:47: ( 'order:' (o= order_field )* ';' )
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:44:5: 'order:' (o= order_field )* ';'
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:43:47: ( 'order:' (o= order_field )* ';' )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:44:5: 'order:' (o= order_field )* ';'
             {
              defs = new OrderSpecification(); 
             match(input,20,FOLLOW_20_in_order_def289); 
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:45:14: (o= order_field )*
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:45:14: (o= order_field )*
             loop4:
             do {
                 int alt4=2;
@@ -375,7 +371,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:45:15: o= order_field
+            	    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:45:15: o= order_field
             	    {
             	    pushFollow(FOLLOW_order_field_in_order_def294);
             	    o=order_field();
@@ -408,7 +404,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
     // $ANTLR start order_defs
-    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:47:1: order_defs returns [ ArrayList<OrderSpecification> defs ] : (o= order_def )+ ;
+    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:47:1: order_defs returns [ ArrayList<OrderSpecification> defs ] : (o= order_def )+ ;
     public final ArrayList<OrderSpecification> order_defs() throws RecognitionException {
         ArrayList<OrderSpecification> defs = null;
 
@@ -416,11 +412,11 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
         try {
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:47:59: ( (o= order_def )+ )
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:48:5: (o= order_def )+
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:47:59: ( (o= order_def )+ )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:48:5: (o= order_def )+
             {
              defs = new ArrayList<OrderSpecification>(); 
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:49:5: (o= order_def )+
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:49:5: (o= order_def )+
             int cnt5=0;
             loop5:
             do {
@@ -434,7 +430,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
                 switch (alt5) {
             	case 1 :
-            	    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:49:6: o= order_def
+            	    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:49:6: o= order_def
             	    {
             	    pushFollow(FOLLOW_order_def_in_order_defs330);
             	    o=order_def();
@@ -473,17 +469,17 @@ public class GalagoTypeBuilderParser extends Parser {
     };
 
     // $ANTLR start package_name
-    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:52:1: package_name returns [ String name ] : ID ( '.' ID )* ;
+    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:52:1: package_name returns [ String name ] : ID ( '.' ID )* ;
     public final package_name_return package_name() throws RecognitionException {
         package_name_return retval = new package_name_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:52:38: ( ID ( '.' ID )* )
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:53:5: ID ( '.' ID )*
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:52:38: ( ID ( '.' ID )* )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:53:5: ID ( '.' ID )*
             {
             match(input,ID,FOLLOW_ID_in_package_name355); 
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:53:8: ( '.' ID )*
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:53:8: ( '.' ID )*
             loop6:
             do {
                 int alt6=2;
@@ -496,7 +492,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
                 switch (alt6) {
             	case 1 :
-            	    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:53:9: '.' ID
+            	    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:53:9: '.' ID
             	    {
             	    match(input,21,FOLLOW_21_in_package_name358); 
             	    match(input,ID,FOLLOW_ID_in_package_name360); 
@@ -528,7 +524,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
     // $ANTLR start package_def
-    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:56:1: package_def returns [ String name ] : 'package' pn= package_name ';' ;
+    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:56:1: package_def returns [ String name ] : 'package' pn= package_name ';' ;
     public final String package_def() throws RecognitionException {
         String name = null;
 
@@ -536,8 +532,8 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
         try {
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:56:37: ( 'package' pn= package_name ';' )
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:57:5: 'package' pn= package_name ';'
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:56:37: ( 'package' pn= package_name ';' )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:57:5: 'package' pn= package_name ';'
             {
             match(input,22,FOLLOW_22_in_package_def385); 
             pushFollow(FOLLOW_package_name_in_package_def389);
@@ -562,7 +558,7 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
     // $ANTLR start type_def
-    // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:60:1: type_def returns [ TypeSpecification spec ] : p= package_def 'type' i= ID '{' v= field_defs o= order_defs '}' ;
+    // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:60:1: type_def returns [ TypeSpecification spec ] : p= package_def 'type' i= ID '{' v= field_defs o= order_defs '}' ;
     public final TypeSpecification type_def() throws RecognitionException {
         TypeSpecification spec = null;
 
@@ -575,8 +571,8 @@ public class GalagoTypeBuilderParser extends Parser {
 
 
         try {
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:60:45: (p= package_def 'type' i= ID '{' v= field_defs o= order_defs '}' )
-            // /Users/melvinbosnjak/repos/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:61:5: p= package_def 'type' i= ID '{' v= field_defs o= order_defs '}'
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:60:45: (p= package_def 'type' i= ID '{' v= field_defs o= order_defs '}' )
+            // /Users/jakemaschoff/Desktop/6550Project/galago-3.6/tupleflow-typebuilder/src/main/antlr/org/lemurproject/galago/tupleflow/typebuilder/GalagoTypeBuilder.g:61:5: p= package_def 'type' i= ID '{' v= field_defs o= order_defs '}'
             {
 
                     spec = new TypeSpecification();

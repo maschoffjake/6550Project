@@ -47,6 +47,7 @@ class Experiment extends Component {
                 console.log('BAD API CALL! Using experiment ' + this.state.experimentNumber + ' which is not a valid experiment.');
                 return;
         }
+        query += `&variance=${this.state.varianceNum}`;
         const experimentData = await API.get(`/experiment/${this.state.experimentNumber}${query}`,
                                                 {
                                                     responseType: 'json'
